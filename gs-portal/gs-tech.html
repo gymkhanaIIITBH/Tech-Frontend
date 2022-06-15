@@ -5,40 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Tech Login</title>
+    <title>GS Login</title>
 
     <!-- Import CSS -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/gs-tech.css">
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/gs-tech.css">
 
     <!-- Import JS -->
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="./js/gs-tech.js"></script>
 </head>
 
 <body>
     <!-- To block for 992px -->
-    <%- include('../template/Block.ejs') %> 
+    <!-- <%#- include('../template/Block.ejs') %>  -->
 
 
     <section class="main">
         <div class="head">
             <h1>Welcome to GS Management Portal</h1>
         </div>
-        <div class="password-check">
-            <span><%=passwordCheck%></span>
-        </div>
+        <div class="password-check"></div>
         <div class="login row">
-            <img class="col-6" src="../public/data/default-user-image.png" alt="login-banner">
-            <form class="col-6 form" action="/gsLogin" method="post">
+            <img class="col-6" src="../assets/data/default-user-image.png" alt="login-banner">
+            <form class="col-6 form" id="gsLogin" action="http://localhost:5000/api/gs/gsLogin" method="post">
                 <input type="text" class="form-input" name="username" placeholder="Username">
                 <input type="password" class="form-input" name="password" placeholder="Password">
                 <!-- <input type="file" name="image" class="form-input"> -->
                 <input type="submit" class="form-submit" value="Login">
             </form>
         </div>
-        <div class="ad"><a href="/admin">Back to Coordinators Portal</a></div>
+        <div class="ad"><a href="../admin-portal/admin.html">Back to Coordinators Portal</a></div>
     </section>
 </body>
 
