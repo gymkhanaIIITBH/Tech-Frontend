@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+body {
+  background-color: rgba(0, 0, 0, 0.668) !important;
+  margin: 0;
+  padding: auto;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Tapestry', cursive;
+}
+
+.ad-log-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  margin: 5% 25%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.773);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.login span {
+  color: red;
+}
+
+.ad-input, .ad-submit {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+
+.ad-input b {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.ad-input input, .ad-input select {
+  width: 50%;
+  height: 35px;
+  border: 1px solid rgb(77, 75, 75);
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+  /* margin-left: 40px; */
+  color: rgb(77, 76, 76);
+  justify-content: right;
+}
+
+.ad-submit input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(77, 75, 75);
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+  /* margin-left: 5px; */
+  color: rgb(77, 76, 76);
+}
+
+.ad-head {
+  padding-bottom: 2%;
+}
+
+.ad-head h1 {
+  font-size: 2.5em;
+  color: rgba(32, 89, 245, 0.932);
+}
+
+.ad-log-info {
+  padding: 3% auto;
+  text-align: center;
+  color: #fff;
+}
+
+.ad-log-info p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.ad-log-info span {
+  font-style: italic;
+  color: rgb(47, 146, 233);
+}
+
+.register {
+  display: none;
+}
+
+#register span {
+  cursor: pointer;
+}

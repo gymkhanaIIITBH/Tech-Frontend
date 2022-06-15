@@ -1,0 +1,115 @@
+body {
+  background-color: rgb(46, 46, 46);
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  overflow: hidden;
+}
+
+* {
+    color: #fff;
+}
+
+.nav-logo {
+    width: 10%;
+}
+
+.nav-logo img {
+    width: 100%;
+}
+
+.take {
+    margin-top: 3%;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-input-name {
+    font-weight: 600;
+}
+
+.form-input-name span {
+    color: yellow;
+    font-size: 22px;
+}
+
+.form-input {
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 2px;
+    border-bottom: 2px solid #fff;
+}
+
+.form-submit {
+  background-color: yellow;
+  color: #000;
+  outline: none;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3vh 2vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.497);
+  border-radius: 20px;
+  /* overflow: hidden; */
+  margin-top: 3%;
+}
+
+.show {
+  width: 100%;
+}
+
+span {
+  font-size: 20px;
+}
+
+.col-4 span, .col-12 span {
+  color: yellow;
+}
+
+.error span{
+  color: red;
+  font-size: 22px;
+}
+
+.cert img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.row {
+  margin-top: 1%;
+}
+
+@media (max-width:992px) {
+  body {
+    overflow: auto;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-4 {
+    width: 30%;
+  }
+  .details-col {
+    width: 100%;
+  }
+  .img {
+    width: 100%;
+    margin-top: 3%;
+  }
+}

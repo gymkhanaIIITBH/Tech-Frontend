@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* to block */
+
+        .block {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgb(34, 34, 34), rgb(150, 149, 149));
+            z-index: 10;
+            color: white;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .block a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 1s ease-in-out;
+        }
+
+        .block a:hover {
+            color: white;
+            transform: scale(1.2);
+        }
+
+        @media (max-width:992px) {
+            .block {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <h1>Use Laptop/ Desktop</h1>
+        <a href="/">
+            <p>home</p>
+        </a>
+        <a href="/web">
+            <p>Webverse</p>
+        </a>
+        <a href="/ai">
+            <p>AIML</p>
+        </a>
+        <a href="/coding">
+            <p>PyC</p>
+        </a>
+        <a href="/android">
+            <p>Android</p>
+        </a>
+        <a href="/robotics">
+            <p>Robosapiens</p>
+        </a>
+        <a href="/blockchain">
+            <p>Blockchain</p>
+        </a>
+        <a href="/electronics">
+            <p>Electronics</p>
+        </a>
+        <a href="/cyber">
+            <p>Cyber</p>
+        </a>
+        <a href="/ecell">
+            <p>E-Cell</p>
+        </a>
+    </div>
+</body>
+
+</html>

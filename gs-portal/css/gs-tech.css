@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Hurricane&display=swap");
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.842);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.head {
+  text-align: center;
+}
+
+.head h1 {
+  font-family: "Hurricane", cursive;
+  font-weight: 600;
+  color: rgb(73, 42, 248);
+}
+
+.password-check {
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 14px;
+}
+
+.login {
+  width: 50%;
+  margin: 4%;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: rgba(207, 207, 211, 0.1) 0px 8px 24px,
+  rgba(207, 207, 211, 0.1) 0px 16px 56px, rgba(207, 207, 211, 0.1) 0px 24px 80px;
+}
+
+.col-6:nth-child(1) {
+  padding: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.col-6:nth-child(2) {
+  padding: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  width: 80%;
+  margin-bottom: 8%;
+  background-color: rgba(226, 226, 226, 0.863);
+  padding: 3%;
+}
+
+.form-input::placeholder {
+    color: rgb(32, 29, 29);
+}
+
+.form-submit {
+  width: 40%;
+  margin-top: 5%;
+  background-color: rgba(85, 85, 240, 0.904);
+  padding: 3%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-submit:hover {
+  transform: scale(1.1);
+}
+
+.form-submit:active {
+  transform: scale(0.9);
+}
+
+.form-input,
+.form-submit {
+  border-radius: 8px;
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,490 @@
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(49, 18, 50);
+  border-radius: 10px;
+}
+
+body {
+  background-image: url("../data/maxresdefault.jpg");
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.active-bg {
+  background-image: url("../data/3600167.jpg");
+}
+.navbar {
+  position: fixed !important;
+  width: 100%;
+  z-index: 10;
+  background-color: #060606cb;
+}
+.home-section {
+  background-image: url("../data/Untitled\ design.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 70% auto;
+}
+.home-text {
+  margin-bottom: 15%;
+  margin-left: 5%;
+  padding-top: 15%;
+}
+.container {
+  color: #fff;
+}
+.home-social-list {
+  margin: 0;
+  padding: 4% 2%;
+  list-style: none;
+  font-size: 2.4rem;
+  line-height: 1.75;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .home-text {
+    padding-top: 40%;
+  }
+}
+.home-social-list::before {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 125px;
+  background-color: rgba(255, 255, 255, 0.753);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+.home-social-list::after {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 125px;
+  background-color: rgba(255, 255, 255, 0.753);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+.home-social-list li {
+  padding-left: 0;
+}
+.home-social-list li a,
+.home-social-list li a:visited {
+  color: #ffffff;
+}
+.home-social-list li a:hover,
+.home-social-list li a:focus,
+.home-social-list li a:active {
+  color: #bbb8b8;
+}
+
+.image-section {
+  width: 100%;
+  height: 25%;
+  background: url("ai-nuclear-energy-background-future-innovation-disruptive-technology.jpg");
+  z-index: -1;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-origin: inherit;
+}
+
+
+.carousel-container {
+  background-color: rgba(190, 190, 190, 0.37);
+  border-radius: 8px;
+  padding: 2%;
+  height: 100vh;
+}
+.carousel-img {
+  border-radius: 8px;
+  margin-right: 4%;
+  height: auto;
+  width: 70%;
+}
+.carousel-details {
+  color: #fff;
+  margin: auto 2%;
+  width: 80%;
+}
+.carousel-details h5 {
+  font-weight: 800;
+}
+.carousel-text {
+  font-weight: 400;
+}
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  perspective: 1px;
+}
+.carousel-indicators button.active {
+  padding: 2px !important;
+}
+.carousel-item:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.carousel-item:active {
+  transform: scale(0.8);
+}
+.carousel-inner {
+  padding: 1em;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: fit-content !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #dad1d1;
+  border-radius: 5px !important;
+  height: 60px !important;
+
+  top: 0;
+}
+
+.newstext{
+  height: 250px !important;
+}
+
+.newstext p:nth-child(2){
+  height: 100px !important; 
+}
+
+@media (max-width: 762px) {
+  .carousel-container {
+    flex-direction: column;
+    height: 100%;
+  }
+  .carousel-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4%;
+  }
+  .carousel-details {
+    width: 100%;
+  }
+}
+
+header p {
+  padding: 50px;
+  text-align: center;
+  color: #bebebe;
+  text-transform: uppercase;
+  font-size: 65px;
+  font-weight: 700;
+}
+
+header p {
+  padding: 50px;
+  text-align: center;
+  color: #bebebe;
+  text-transform: uppercase;
+  font-size: 65px;
+  font-weight: 700;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  color: #fff;
+  background-color: rgba(26, 24, 24, 0.774);
+  position: relative;
+  display: flex;
+}
+
+.footer > * {
+  flex: 1 100%;
+}
+
+.l-footer {
+  /* margin-right: 1.25em;
+  margin-bottom: 2em;
+  min-width: 437px; */
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+}
+.social-inst{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-inst a{
+  margin-right: 20%;
+}
+
+@media (max-width: 992px)
+{
+  .l-footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .l-footer {
+    width: 100%;
+    margin: auto;
+    /* text-align: center; */
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  vertical-align: center;
+}
+
+.footer li {
+  line-height: 4em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.r-footer {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+
+.r-footer > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: #999;
+  transition: 0.5s;
+}
+.box a:hover {
+  color: #fff;
+}
+.h-box {
+  column-count: 1;
+  column-gap: 0em;
+}
+.b-footer {
+  display: flex;
+  color: #999;
+  background-color: #101111;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0 0 0;
+}
+
+@media (max-width: 710px) {
+  .b-footer {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+
+.l-footer p {
+  color: #999;
+}
+.l-footer a {
+  color: #999;
+  margin-right: 4%;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .features {
+    flex-grow: 2;
+  }
+}
+p a {
+  color: #9c9c9c;
+}
+p a:hover {
+  color: white;
+}
+.fa-brands, .fa-solid {
+  transition: 0.5s ease-in-out;
+}
+.fa-brands:hover, .fa-solid:hover {
+  transform: scale(1.5);
+}
+.btn-light {
+  height: 10%;
+}
+.footer-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gs-tech {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+}
+.gs-img {
+  width: 70%;
+}
+.gs-img img {
+  width: 100%;
+  height: 30vh;
+  border-radius: 50%;
+}
+.gs-desc {
+  width: 100%;
+  text-align: center;
+  color: #9c9c9c;
+}
+.social-coord {
+  display: flex;
+  justify-content: space-around;
+}
+.social-coord a{
+  margin: auto 10%;
+  font-size: 22px;
+  color: #999;
+}
+@media (max-width: 992px) {
+  .footer-details {
+    flex-direction: column-reverse;
+  }
+  .gs-tech {
+    width: 100%;
+  }
+  .gs-img img {
+    height: 20vh;
+  }
+}
+
+
+/* Club Design */
+
+.ClubDesign{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ClubDesign a{
+  margin: 30px 0px;
+  color: white;
+  text-decoration: none;
+}
+
+.ClubDesign a:hover{
+  color: white;
+}
+
+.Clubcard{
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.822);
+  height: 450px;
+  /* border: 3px solid rgb(20, 11, 11); */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+}
+
+.Clubimage{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 1;
+  color: white;
+}
+
+.Clubimage::before{
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.Clubcard:hover{
+  transform: scale(1.05);
+}
+
+.Clubimage h1{
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+}
+
+.Clubimage h3{
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ClubInfo{
+  padding: 10px 15px;
+  height: 245px;
+  overflow: auto;
+}
+
+/* Club Design Images */
+
+.pycImage::before{
+  background-image: url('../data/coding-banner.jpg');
+}
+.webImage::before{
+  background-image: url('../data/web-banner.png');
+}
+.aiImage::before{
+  background-image: url('../data/ai-banner.jpg');
+}
+.roboImage::before{
+  background-image: url('../data/robotics-banner.jpg');
+}
+.blockImage::before{
+  background-image: url('../data/blockchain-banner.png');
+}
+.cyberImage::before{
+  background-image: url('../data/cyber-banner.jpg');
+}
+.electroImage::before{
+  background-image: url('../data/electronics-banner.png');
+}
+.ecellImage::before{
+  background-image: url('../data/ecell.png');
+}
+.androidImage::before{
+  background-image: url('../data/android_about.jpg');
+}
+

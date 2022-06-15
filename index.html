@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image" href="../public/data/150dpi (1) (1).png">
+  <title>Technical Board</title>
+
+  <!-- Include CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+  <!-- <script src="https://kit.fontawesome.com/fdb8b6bfad.js" crossorigin="anonymous"></script> -->
+
+  <!-- Include JS -->
+  <script type="text/javascript" src="./assets/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark px-auto">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i style="font-weight: 800; color: aqua" id="tecnical">TECHNICAL</i>
+        <i style="font-weight: bold">BOARD</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="#" style="font-weight: 500">
+              Home
+            </a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link active" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="font-weight: 500">
+              Club
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="/coding">PyC</a></li>
+              <li><a class="dropdown-item" href="/web">WebVerse</a></li>
+              <li><a class="dropdown-item" href="/ai">AI/ML</a></li>
+              <li><a class="dropdown-item" href="/android">Android</a></li>
+              <li><a class="dropdown-item" href="/robotics">Robotics</a></li>
+              <li>
+                <a class="dropdown-item" href="/blockchain">Blockchain</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/cyber">Cyber Security</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/electronics">Electronics</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/ecell">E-Cell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2" style="font-weight: 500">
+            <a class="nav-link active" href="#">About Us</a>
+          </li>
+          <li class="nav-item mx-2" style="font-weight: 500">
+            <a class="nav-link active" href="/certificate">Verify Certificates</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav ml-4 mb-2 mb-lg-0 ">
+          <div class="btn-group">
+            <button type="button" onclick="window.location.href='/admin';" class="btn btn-primary"
+              aria-expanded="false">
+              Admin
+            </button>
+          </div>
+        </ul>
+      </div>
+  </nav>
+  <section class="home-section d-flex" id="home">
+    <ul class="home-social-list">
+      <li class="animate-intro">
+        <a href="https://www.instagram.com/technical_iiitbh/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li class="animate-intro">
+        <a href="https://www.youtube.com/channel/UCy5kCWrCG_eipQUk5sfX3fQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </li>
+      <li class="animate-intro">
+        <a href="https://www.linkedin.com/company/technical-iiitbh/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </li>
+    </ul>
+    <div class="container d-flex">
+      <div class="home-text">
+        <h3> Welcome to</h3>
+        <h1 style="font-weight: 700;"> Technical Board</h1>
+        <h2> IIIT Bhagalpur</h2>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-inner newsdesign">
+        <div class="carousel-item active" onclick="window.open('<%#=news[news.length-1].link%>','_blank');">
+          <div class="card text-center newstext" style="background-color: rgba(61, 60, 62, 0.59);">
+            <div class="card-body" style="color: #fff;">
+              <h4 class="card-title">
+                <%#=news[news.length-1].topic%>
+              </h4>
+              <p class="card-text">
+                <%#=news[news.length-1].desc%>
+              </p>
+              <p class="card-text">
+                Posted By: <%#=news[news.length-1].by%>
+              </p>
+              <p class="card-text">
+                Posted On: <%#=news[news.length-1].date%>
+              </p>
+            </div>
+          </div>
+        </div>
+        <%#for(var i=news.length-2;i>=0;i--){%>
+          <div class="carousel-item" onclick="window.open('<%#=news[i].link%>','_blank');">
+            <div class="card text-center newstext" style="background-color: rgba(61, 60, 62, 0.59);">
+              <div class="card-body" style="color: #fff;">
+                <h4 class="card-title">
+                  <%#=news[i].topic%>
+                </h4>
+                <p class="card-text">
+                  <%#=news[i].desc%>
+                </p>
+                <p class="card-text">
+                  Posted By: <%#=news[i].by%>
+                </p>
+                <p class="card-text">
+                  Posted on: <%#=news[i].date%>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <%#}%>
+      </div> -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Clubs Design -->
+  <section class="container my-5 ">
+    <div class="ClubDesign">
+      <!-- PyC -->
+      <a href="/coding">
+        <div class="Clubcard">
+          <div class="Clubimage pycImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>PyC</h1>
+            <h3>Coding Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Our mission is to create a fun and supportive environment where we develop programming and statistics
+              skills together. We want to replace statistics anxiety and code fear with inspiration and motivation to
+              learn, and here we will share our experience.<br><br>
+              The main vision of the club is to improve the art of competitive programming skills in the students and
+              to
+              make them ready for renowned competitions like ACM-ICPC, Google code jam, various Hackathons conducted
+              at
+              national and International levels etc.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Webverse -->
+      <a href="/web">
+        <div class="Clubcard">
+          <div class="Clubimage webImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>WebVerse</h1>
+            <h3>Web Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              The Web Development Club aims to provide students a platform and resources to gain skills and realize
+              projects. We strive to teach and help students acquire full stack WEB skills.To achieve these objectives
+              we conduct various lectures, workshops, hackathon s and mentorship programs to help students realize
+              their
+              dream. The mission of the club is to expose students to challenges and new technologies in the field of
+              WEB DEVELOPMENT and DESIGN and thus to nurture and develop their skill set in this arena. Regular
+              meetings
+              and mentorship programs will definitely help students to achieve their goals. We believe in no
+              experience
+              is necessary but eagerness to learn is essential.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- AI ML -->
+      <a href="/ai">
+        <div class="Clubcard">
+          <div class="Clubimage aiImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>AI & ML</h1>
+            <h3>AI Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Our aim is to educate members on what exactly is ML and its possibilities, making members familiar with
+              frameworks, and best practices. The Members should understand the algorithms, their maths and Real World
+              uses and the last and most important things, we will try to provide practical and hands-on experince.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Android -->
+      <a href="/android">
+        <div class="Clubcard">
+          <div class="Clubimage androidImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>Android</h1>
+            <h3>App Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Our aim is to educate members on what exactly is ML and its possibilities, making members familiar with
+              frameworks, and best practices. The Members should understand the algorithms, their maths and Real World
+              uses and the last and most important things, we will try to provide practical and hands-on experince.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Robotics Club -->
+      <a href="/robotics">
+        <div class="Clubcard">
+          <div class="Clubimage roboImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>Robotics Club</h1>
+            <h3>Robotics Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Primary mission of our club is to make students skilled in building and handling hardware projects. We
+              will also look forward to represent our college in hackathons and Techfest. Our club works in such a way
+              that it generates curiosity and interest towards robotics in younger generation. The club also includes
+              workshops for Intercollege and Intracollege competitions.
+              We are committed to make IIIT Bhagalpur a pioneer in the emerging branch of Robotics and IoT.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Blockchain Club -->
+      <a href="/blockchain">
+        <div class="Clubcard">
+          <div class="Clubimage blockImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>Blockchain Club</h1>
+            <h3>Blockchain Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Our vision is to develop a group of students skilled in Blockchain Mining, Crypto-Mining, Smart Contract
+              development and encryption of data. First step is to learn Solidity, then Ethereum and then making Smart
+              Contracts and Alt Coins. Understanding Decentralized Applications are essential for the same and hence,
+              we are focusing on the same. Our objective is to utilize the same technology for Healthcare sector,
+              Banking and Finance, Supply Chain, Chatting and Video Conferencing and Security. In the upcoming years,
+              blockchain will be a leading industry in the IT Sector, and role is to train them for the same. This
+              club starts from the beginning and leads the students in the early phase to understand the same.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Cyber Club -->
+      <a href="/cyber">
+        <div class="Clubcard">
+          <div class="Clubimage cyberImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>Cyber</h1>
+            <h3>Cyber Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Debitis voluptatum voluptas consectetur officia quibusdam
+              dicta animi suscipit illo, ipsam a error! Beatae, dolore?
+              Perspiciatis perferendis nisi quas praesentium eum delectus.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Electronics Club -->
+      <a href="/electronics">
+        <div class="Clubcard">
+          <div class="Clubimage electroImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>Electronics Club</h1>
+            <h3>Electronics Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Debitis voluptatum voluptas consectetur officia quibusdam
+              dicta animi suscipit illo, ipsam a error! Beatae, dolore?
+              Perspiciatis perferendis nisi quas praesentium eum delectus.
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- Ecell -->
+      <a href="/ecell">
+        <div class="Clubcard">
+          <div class="Clubimage ecellImage">
+            <!-- <img src="../public/data/coding-banner.jpg" class="" alt="Club-1" width="100%" height="100%" /> -->
+            <h1>E-cell</h1>
+            <h3>Entrepreneurship Comunity</h3>
+          </div>
+          <div class="ClubInfo">
+            <p>
+              The Electronics club was created by electronic
+              hobbyists that strive hard to impart enthusiasm
+              and passion for electronics and allied fields among
+              students. It envisions nurturing the engineering
+              maturity by giving practical hands on exposure to
+              various domains. In this era of rapidly evolving
+              technologies we strive to make them aware of the
+              various technological advancements happening
+              around the globe. We believe in imagination,
+              Innovation and Application. We organize various
+              workshops, lectures, competitions and projects
+              throughout the year to bring out the “TECHIE” in
+              you
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-details">
+      <div class="l-footer">
+        <h1 class="text-center">
+          <a href="https://www.iiitbh.ac.in/" target="_blank"><img src="../assets/data/150dpi (1) (1).png" alt=""
+              width="180px" /></a>
+        </h1>
+        <p class="text-justify text-center">
+          It is one of the IIITs set up by MHRD, Govt of India in
+          PUBLIC-PRIVATE PARTNERSHIP(PPP) mode. It started functioning from
+          the academic year 2017.
+        </p>
+        <p style="font-style: italic" class="text-center">
+          <i class="fa fa-home" style="color: darkgoldenrod"></i>
+          <font color="#999">Bhagalpur College of Engineering Campus Sabour, Bhagalpur -
+            813210
+          </font>
+        </p>
+        <div class="social-inst">
+          <a href="https://www.iiitbh.ac.in/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+          <a href="https://www.facebook.com/iiitbh.ac.in" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/iiit_bhagalpur_official/" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/school/iiitbh/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/IIITBhagalpur" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCmGmxS3Y3tt_7RHW_7JUKng" target="_blank"><i
+              class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="gs-tech">
+        <div class="gs-img">
+          <img src="../assets/data/tech-coord.jpg" alt="tc-img">
+        </div>
+        <div class="gs-desc">
+          <span style="font-weight: 900; font-size: 24px;">
+            Dr. Dhrubjyoti Bhattacharya
+          </span>
+          <p>Technical Coordinator,<br>Indian Institute of Information Technology, Bhagalpur</p>
+        </div>
+        <div class="social-coord">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="gs-tech">
+        <div class="gs-img">
+          <img src="../assets/data/gs-tech.jpg" alt="gs-img">
+        </div>
+        <div class="gs-desc">
+          <span style="font-weight: 900; font-size: 24px;">
+            Mr. Nitish Kumar
+          </span>
+          <p>G.S. Technical,<br>Indian Institute of Information Technology, Bhagalpur</p>
+        </div>
+        <div class="social-coord">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="b-footer">
+    <p class="text-center">
+      All rights reserved by Technical Board, Indian Institute of Information
+      Technology, Bhagalpur, 2021
+    </p>
+  </div>
+  <!-- Include base JS -->
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>
