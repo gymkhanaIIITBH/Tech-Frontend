@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -8,103 +8,72 @@
   <title>Resource</title>
 
   <!-- Import CSS -->
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../public/css/resource.css" />
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+  <link rel="stylesheet" href="./css/resource.css" />
 
   <!-- Import JS -->
-  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- <script defer src="../public/js/admin-porta.js"></script> -->
+  <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script defer src="../assets/js/admin-porta.js"></script> -->
 </head>
 
 <body>
   <button class="sideBarButton">≋</button>
   <nav id="navdesign" class="navdesign">
     <div class="logo">
-      <img src="../public/data/150dpi (1) (1).png" alt="" height="150vh" width="150vw" />
+      <img src="../assets/data/150dpi (1) (1).png" alt="" height="150vh" width="150vw" />
     </div>
     <div class="closebtn">X</div>
     <br />
     <div class="navlinks">
-      <div class="links">
-        <img class="clublogo" src="../public/data/web-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/WebVerse">Webverse</a>
+      <div class="links" onclick="ResourceFetch('WebVerse')">
+        <img class="clublogo" src="../assets/data/web-logo.png" alt="" height="30px" width="30px" />
+        <span>WebVerse</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/web-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/PyC">Pyc</a>
+      <div class="links" onclick="ResourceFetch('Pyc')">
+        <img class="clublogo" src="../assets/data/web-logo.png" alt="" height="30px" width="30px" />
+        <span>Pyc</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/robo-logo.jpeg" alt="" height="30px" width="30px" />
-        <a href="/resource/Robosapiens">Robo</a>
+      <div class="links" onclick="ResourceFetch('Robosapiens')">
+        <img class="clublogo" src="../assets/data/robo-logo.jpeg" alt="" height="30px" width="30px" />
+        <!-- <a href="/resource/Robosapiens">Robo</a> -->
+        <span>Robosapiens</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/ai-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/AIML">AI/ML</a>
+      <div class="links" onclick="ResourceFetch('AIML')">
+        <img class="clublogo" src="../assets/data/ai-logo.png" alt="" height="30px" width="30px" />
+        <span>AIML</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/web-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/Blockchain">Blockchain</a>
+      <div class="links" onclick="ResourceFetch('Blockchain')">
+        <img class="clublogo" src="../assets/data/web-logo.png" alt="" height="30px" width="30px" />
+        <span>Blockchain</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/elec-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/Electronics">Electro</a>
+      <div class="links" onclick="ResourceFetch('Electronics')">
+        <img class="clublogo" src="../assets/data/elec-logo.png" alt="" height="30px" width="30px" />
+        <span>Electronics</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/ai-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/Android">Android</a>
+      <div class="links" onclick="ResourceFetch('Android')">
+        <img class="clublogo" src="../assets/data/ai-logo.png" alt="" height="30px" width="30px" />
+        <span>Android</span>
       </div>
-      <div class="links">
-        <img class="clublogo" src="../public/data/web-logo.png" alt="" height="30px" width="30px" />
-        <a href="/resource/Cyber">Cyber</a>
+      <div class="links" onclick="ResourceFetch('Cyber')">
+        <img class="clublogo" src="../assets/data/web-logo.png" alt="" height="30px" width="30px" />
+        <span>Cyber</span>
       </div>
     </div>
   </nav>
   <section class="herosection">
     <h1>Technical Board, IIIT Bhagalpur</h1>
-    <h2>Resource : <%=club%>
+    <h2>Resource : <span id="ClubNameMain"></span>
     </h2>
-    <div class="dataStore">
-      <% for( let i=0; i < data.length; i++ ) { %>
-        <a href="<%=data[i].link%>">
-          <div class="data">
-            <h3 class="topic">
-              <%= data[i].topic %>
-            </h3>
-            <p class="desc">
-              <%= data[i].desc %>
-            </p>
-            <h6 class="cont">Source : <%= data[i].contenttype %>
-            </h6>
-            <!-- <h5 class="datalink">Link : <a href="">Click Here</a></h5> -->
-          </div>
-        </a>
-        <% } %>
-          <!-- <a href="/">
-                        <div class="data">
-                            <h3 class="topic">Topic</h3>
-                            <p class="desc">Great things are done by a series of small things brought together".
-                                Being Web development Club of a technical institution, we do pretty much everything and
-                                anything
-                                related to the development of website. Coding events, Workshops, Hackathons (48 hours
-                                non stop
-                                coding) are just to name a few.</p>
-                            <h6 class="cont">Source : YOUTUBE</h6>
-                        </div>
-                    </a> -->
-    </div>
-    <div>
-      <% if (data.length==0) { %>
-        <h1>You are On Wrong Page or Data is not updated</h1>
-        <% } %>
+    <div id="dataStore">
     </div>
   </section>
   <footer>
     <p>Copyright : reserved</p>
   </footer>
   <!--importing resource.js-->
-  <script src="../public/js/resource.js"></script>
+  <script src="./js/resource.js"></script>
 </body>
 
 </html>
