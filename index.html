@@ -87,10 +87,12 @@
         <a href="https://www.instagram.com/technical_iiitbh/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
       </li>
       <li class="animate-intro">
-        <a href="https://www.youtube.com/channel/UCy5kCWrCG_eipQUk5sfX3fQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.youtube.com/channel/UCy5kCWrCG_eipQUk5sfX3fQ" target="_blank"><i
+            class="fa-brands fa-youtube"></i></a>
       </li>
       <li class="animate-intro">
-        <a href="https://www.linkedin.com/company/technical-iiitbh/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/company/technical-iiitbh/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
       </li>
     </ul>
     <div class="container d-flex">
@@ -103,47 +105,45 @@
   </section>
   <section class="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <!-- <div class="carousel-inner newsdesign">
-        <div class="carousel-item active" onclick="window.open('<%#=news[news.length-1].link%>','_blank');">
+      <div class="carousel-inner newsdesign">
+        <div class="carousel-item active">
           <div class="card text-center newstext" style="background-color: rgba(61, 60, 62, 0.59);">
             <div class="card-body" style="color: #fff;">
               <h4 class="card-title">
-                <%#=news[news.length-1].topic%>
+
               </h4>
-              <p class="card-text">
-                <%#=news[news.length-1].desc%>
+              <p class="card-text newsDesc">
+
               </p>
               <p class="card-text">
-                Posted By: <%#=news[news.length-1].by%>
+                Posted By: <span class="newsPost"></span>
               </p>
               <p class="card-text">
-                Posted On: <%#=news[news.length-1].date%>
+                Posted On: <span class="newsDate"></span>
               </p>
             </div>
           </div>
         </div>
-        <%#for(var i=news.length-2;i>=0;i--){%>
-          <div class="carousel-item" onclick="window.open('<%#=news[i].link%>','_blank');">
-            <div class="card text-center newstext" style="background-color: rgba(61, 60, 62, 0.59);">
-              <div class="card-body" style="color: #fff;">
-                <h4 class="card-title">
-                  <%#=news[i].topic%>
-                </h4>
-                <p class="card-text">
-                  <%#=news[i].desc%>
-                </p>
-                <p class="card-text">
-                  Posted By: <%#=news[i].by%>
-                </p>
-                <p class="card-text">
-                  Posted on: <%#=news[i].date%>
-                </p>
-              </div>
-            </div>
+        <div class="carousel-item">
+          <div class="card text-center newstext" style="background-color: rgba(61, 60, 62, 0.59);">
+            <div class="card-body" style="color: #fff;">
+              <h4 class="card-title">
 
+              </h4>
+              <p class="card-text">
+
+              </p>
+              <p class="card-text">
+                Posted By: <span></span>
+              </p>
+              <p class="card-text">
+                Posted on: <span></span>
+              </p>
+            </div>
           </div>
-          <%#}%>
-      </div> -->
+
+        </div>
+      </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
