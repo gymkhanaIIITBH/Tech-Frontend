@@ -28,7 +28,7 @@
             <h1>Admin Portal Login</h1>
         </div>
         <div class="login">
-            <form action="/login" method="post">
+            <form id="formDetails" action="http://localhost:5000/login" method="post">
                 <div class="ad-input row">
                     <b class="col-6">Username: </b>
                     <input class="col-6" type="text" name="username" placeholder="Username">
@@ -41,7 +41,7 @@
                     <input type="submit" value="Login">
                 </div>
             </form>
-            <!-- <span><%#=passowrdCheck%></span> -->
+            <span class="p-check"></span>
         </div>
         <!-- <div class="register">
             <form action="/register" method="post" enctype="multipart/form-data">
