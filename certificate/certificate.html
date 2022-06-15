@@ -8,20 +8,20 @@
     <title>Verify your Certificate</title>
 
     <!-- Import CSS -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../public/css/certificate.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="./css/certificate.css" />
 
     <!-- Import JS -->
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script defer src="../public/js/certificate.js"></script>
+    <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="./js/certificate.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="nav-logo">
-            <img src="../public/data/150dpi (1) (1).png" alt="logo">
+            <img src="../assets/data/150dpi (1) (1).png" alt="logo">
         </div>
         <div class="nav-head">
             <h1>Certificate Verification Portal</h1>
@@ -29,7 +29,7 @@
     </nav>
     <section class="take">
         <div class="container">
-            <form action="/getCert" class="input-form" method="post">
+            <form id="getCert" action="http://localhost:5000/api/cert/getCert" class="input-form" method="post">
                 <div class="form-field">
                     <span class="form-input-name"><span>Enter Certficate Id:</span> IIITBH/</span>
                     <input name="event" class="form-input" required placeholder="Event Name">
@@ -40,87 +40,84 @@
                     <input type="submit" class="form-submit" value="Verify Certificate">
                 </div>
                 <div class="form-field">
-                    <input onclick="window.location.href='/';" style="cursor: pointer;" class="form-submit"
+                    <input onclick="window.location.href='../index.html';" style="cursor: pointer;" class="form-submit"
                         value="Back to Main Site">
                 </div>
             </form>
         </div>
     </section>
-    <% if(show===true) {%>
-        <div class="container show">
-            <div class="row details">
-                <div class="col-8 details-col">
-                    <div class="name row">
-                        <div class="col-4">
-                            <span>Name: </span>
-                        </div>
-                        <div class="col-8">
-                            <span>
-                                <%=certificate?.name ?? "name not available" %>
-                            </span>
-                        </div>
+    <!-- <%# if(show===true) {%> -->
+    <div class="container show">
+        <div class="row details">
+            <div class="col-8 details-col">
+                <div class="name row">
+                    <div class="col-4">
+                        <span>Name: </span>
                     </div>
-                    <div class="c_id row">
-                        <div class="col-4">
-                            <span>Certificate ID: </span>
-                        </div>
-                        <div class="col-8">
-                            <span>
-                                <%=certificate?.c_id ?? "id not available" %>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="date row">
-                        <div class="col-4">
-                            <span>Date of Issue: </span>
-                        </div>
-                        <div class="col-8">
-                            <span>
-                                <%=certificate?.date ?? "date not available" %>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="club row">
-                        <div class="col-4">
-                            <span>Issuing Club: </span>
-                        </div>
-                        <div class="col-8">
-                            <span>
-                                <%=certificate?.club ?? "club not available" %>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="events row">
-                        <div class="col-4">
-                            <span>Event Name: </span>
-                        </div>
-                        <div class="col-8">
-                            <span>
-                                <%=certificate?.event ?? "event not available" %>
-                            </span>
-                        </div>
+                    <div class="col-8">
+                        <!-- <span> -->
+                        <!-- <%#=certificate?.name ?? "name not available" %> -->
+                        <!-- </span> -->
                     </div>
                 </div>
-                <div class="col-4 img">
-                    <div class="cert row">
-                        <div class="col-12">
-                            <span>Certificate: </span>
-                        </div>
-                        <div class="col-12">
-                            <img
-                                src="data:image/<%=certificate?.image?.contentType%>;base64,<%=certificate?.image?.data.toString('base64')%>">
-                        </div>
+                <div class="c_id row">
+                    <div class="col-4">
+                        <span>Certificate ID: </span>
+                    </div>
+                    <div class="col-8">
+                        <!-- <span> -->
+                        <!-- <%#=certificate?.c_id ?? "id not available" %> -->
+                        <!-- </span> -->
+                    </div>
+                </div>
+                <div class="date row">
+                    <div class="col-4">
+                        <span>Date of Issue: </span>
+                    </div>
+                    <div class="col-8">
+                        <!-- <span> -->
+                        <!-- <%#=certificate?.date ?? "date not available" %> -->
+                        <!-- </span> -->
+                    </div>
+                </div>
+                <div class="club row">
+                    <div class="col-4">
+                        <span>Issuing Club: </span>
+                    </div>
+                    <div class="col-8">
+                        <!-- <span> -->
+                        <!-- <%#=certificate?.club ?? "club not available" %> -->
+                        <!-- </span> -->
+                    </div>
+                </div>
+                <div class="events row">
+                    <div class="col-4">
+                        <span>Event Name: </span>
+                    </div>
+                    <div class="col-8">
+                        <!-- <span> -->
+                        <!-- <%#=certificate?.event ?? "event not available" %> -->
+                        <!-- </span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 img">
+                <div class="cert row">
+                    <div class="col-12">
+                        <span>Certificate: </span>
+                    </div>
+                    <div class="col-12 cert-img">
+                        <img src="#">
                     </div>
                 </div>
             </div>
         </div>
-        <%} else {%>
-            <div class="container error">
-                <span>
-                    <%=issue%> Enter a valid Certificate ID......
-                </span>
-            </div>
-            <%}%>
+    </div>
+    <!-- <%#} else {%> -->
+    <div class="container error">
+        <span></span> Enter a valid Certificate ID......
+    </div>
+    <!-- <%#}%> -->
 </body>
 
 </html>

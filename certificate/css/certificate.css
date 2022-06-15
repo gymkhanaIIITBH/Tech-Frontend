@@ -7,19 +7,19 @@ body {
 }
 
 * {
-    color: #fff;
+  color: #fff;
 }
 
 .nav-logo {
-    width: 10%;
+  width: 10%;
 }
 
 .nav-logo img {
-    width: 100%;
+  width: 100%;
 }
 
 .take {
-    margin-top: 3%;
+  margin-top: 3%;
 }
 
 .input-form {
@@ -29,21 +29,21 @@ body {
 }
 
 .form-input-name {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .form-input-name span {
-    color: yellow;
-    font-size: 22px;
+  color: yellow;
+  font-size: 22px;
 }
 
 .form-input {
-    background-color: transparent;
-    color: #fff;
-    outline: none;
-    border: none;
-    padding: 2px;
-    border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 2px;
+  border-bottom: 2px solid #fff;
 }
 
 .form-submit {
@@ -69,6 +69,7 @@ body {
 }
 
 .show {
+  display: none;
   width: 100%;
 }
 
@@ -76,11 +77,13 @@ span {
   font-size: 20px;
 }
 
-.col-4 span, .col-12 span {
+.col-4 span,
+.col-12 span {
   color: yellow;
 }
 
-.error span{
+.error,
+.error span {
   color: red;
   font-size: 22px;
 }
@@ -94,7 +97,7 @@ span {
   margin-top: 1%;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
   body {
     overflow: auto;
   }
