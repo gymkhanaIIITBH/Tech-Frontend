@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image" href="../assets/data/ai-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>Android Club</title>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="./css/android.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <!--Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navdesign">
+      <nav class="nav-bar">
+        <input type="checkbox" id="check" >
+                <label for="check" class="sidebar">
+            <i class="fas fa-bars"></i>
+            <ul>
+              <li><a href="#">PYC</a></li>
+              <li><a href="#">WEB VERSE</a></li>
+              <li><a href="#">AI ML</a></li>
+              <li><a href="#">ANDROID</a></li>
+              <li><a href="#">ROBOTICS</a></li>
+              <li><a href="#">BLOCKCHAIN</a></li>
+              <li><a href="#">CYBER SECURITY</a></li>
+              <li><a href="#">ELECTRONICS</a></li>
+              <li><a href="#">E-CELL</a></li>
+          </ul>
+        </label>
+        <div>
+          <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="/resource/Android">Resources</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="gif">
+        <img
+          id="hero-gif"
+          src="http://startupmonkey.in/wp-content/uploads/2020/02/mobile-app-tab2.gif"
+          alt="mobile app"
+        />
+      </div>
+      <div class="name">
+        <p id="typing"></p>
+        <p id="part2">IIIT Bhagalpur
+        </p>
+        <a href="#"><button>Contact us</button></a>
+      </div>
+    </div>
+
+    <div class="about">
+       <div class="info">
+        <h2 id="Heading1"><a name="About">About Us</a></h2>
+      <P>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged.</P></div>
+        <div class="phone-pic"><img src="../assets/data/mobile pic 1.jpg"></div>
+    </div>
+
+    <div class="Coordinators">
+      <h2 class="heading2">Coordinators</h2>
+      <div class="coord-info" id="coord">
+        <div class="content" id="content">
+        <img src="../assets/data/default-user-image.png" id="profile" />
+        <p></p>
+        <button id="button1" onclick="expand()">EXPAND</button>
+        <button id="button2" onclick="retract()">RETRACT</button>
+        <div id="coord-links">
+        <a href="#"><i class="fa-brands fa-facebook-square" id="icon1"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"  id="icon2"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"  id="icon3"></i><a>
+        </div>
+      </div>
+      </div>
+     <div class="scroll-container" id="scroll-container" onclick="info_change()">
+      <label class="scroll">
+        <input type="radio" class="coordinators-option" id="coordinator" name="profile" value='1' checked="checked">
+        <div class="option-display" >
+        </div>
+      </label>
+      <label class="scroll" >
+        <input type="radio" class="coordinators-option" id="coordinator" name="profile" value='2'>
+        <div class="option-display" >
+        </div>
+      </label>
+      <label class="scroll">
+        <input type="radio" class="coordinators-option" id="coordinator" name="profile" value='3'>
+        <div class="option-display" >
+        </div>
+      </label>
+    </div> 
+    </div>
+
+    <div class="projects">
+      <div><h2>Projects</h2></div>
+      <div class="project-wrapper">
+        <div class="btn1"><button class="scroll-left"><i class="fa-solid fa-chevron-left"></i></button></div>
+      <div class="project-scroll">
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+      <div class="p1">
+        <img src="../assets/data/android project.png">
+        <a href="#"><button>VIEW PROJECT</button></a>
+      </div>
+    </div>
+      <div class="btn2"><button class="scroll-right"><i class="fa-solid fa-chevron-right"></i></button></div>
+    </div>
+    </div>
+    <div class="social-links">
+        <ul>
+        <li>
+        <a href="https://www.instagram.com/cybersecurityclub_gst/">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+        </li>
+
+        <li>
+        <a href="https://www.linkedin.com/company/cybersecurity-club-gst/">
+        <i class="fa-brands fa-linkedin"></i>
+        </a>
+        </li>
+
+        <li>
+        <a href="https://www.iiitbh.ac.in">
+        <i class="fa-solid fa-globe"></i>
+        </a>
+        </li>
+        </ul>
+        </div>
+
+    <!-- Include base js -->
+    <script
+      type="text/javascript"
+      src="../assets/jquery/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/bootstrap/dist/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/android.js"></script>
+  </body>
+</html>

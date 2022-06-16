@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cyber Security Club</title>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="./css/cyber.css">
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+
+    <!-- Import JS -->
+    <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/f59d5ae1ae.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+
+    <!--===================================================NAVBAR====================================================-->
+
+    <nav>
+        <input type="checkbox" id="check1">
+        <label for="check1" class="checkbtn1">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo1"><img src="../assets/data/Cyber_Club_Logo.png" alt="" width="100%" height="100%" class="logoimg"><span id="lword">L</span><span id="secword">Sec</span></label>
+        <ul>
+            <li><a class="active1 navlnk" onclick="document.getElementById('homepage').scrollIntoView();">HOME</a></li>
+            <li><a class="navlnk" onclick="document.getElementById('about').scrollIntoView();">ABOUT US</a></li>
+            <li><a class="navlnk" onclick="document.getElementById('coordinators').scrollIntoView();">COORDINATORS</a></li>
+            <li><a class="navlnk" onclick="document.getElementById('projects').scrollIntoView();">PROJECTS</a></li>
+            <li><a class="navlnk" href="/resource/Cyber">RESOURCES</a></li>
+            <li><a id="login" href="/admin">LOGIN</a></li>
+        </ul>
+    </nav>
+
+    <!--===================================================HERO SECTION=============================================-->
+
+    <div class="section" id="homepage">
+        <div class="back1 move" data-speed="5">
+            <div class="name1">CYBER</div>
+            <div class="name1">SECURITY</div>
+        </div>
+        <div class="back2">
+            <img src="../assets/data/Cyber_Club_Logo.png" id="cyberimage" alt="Server Error">
+        </div>
+    </div>
+
+    <!--===============================================ABOUT SECTION=============================================== -->
+
+    <div class="container">
+        <div class="row my-5 reveal">
+            <div class="col-md-12 col-12 order-0 text-center" id="about">
+                <h1 class="aboutus"><span>A</span>bout u<span>S</span></h1>
+                <h2 class="contents1">'' IoT without security = Internet of Threats ''</h2>
+                <p class="contents2">
+                    <span>H</span>ere, at LSec, learning goes hand in hand with practising<span>!</span><br>
+                    <span>W</span>e identify system flaws to make it flawless<span>!!</span><br>
+                    <span>W</span>elcome to the world of hacking<span>!!!</span>
+                </p>
+            </div>
+        </div>
+
+        <!--===================================================COUNTER UP=================================================== -->
+
+        <div class="contig">
+            <div class="counter">
+                <i class="fa fa-file-text"></i>
+                <span class="num">14</span>
+                <h3>projects</h3>
+            </div>
+
+            <div class="counter">
+                <i class="fa fa-users"></i>
+                <span class="num1">53</span>
+                <h3>members</h3>
+            </div>
+
+            <div class="counter">
+                <i class="fa fa-calendar"></i>
+                <span class="num">2</span>
+                <h3>events</h3>
+            </div>
+        </div>
+
+        <!--==============================================COORDINATORS=========================================-->
+
+        <section id="coordinators">
+            <div>
+                <h1 class="aboutus"><span>C</span>oordinator<span>S</span></h1>
+                <div class="team-row">
+                    <div class="member">
+                        <img src="../assets/data/cyber-shubham.jpeg" alt="">
+                        <h2>MR. SHUBHAM KUMAR</h2>
+                        <p>CLUB COORDINATOR</p>
+                        <div class="social-coord">
+                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="../assets/data/gs-tech.jpg" alt="">
+                        <h2>MR. NITISH<br>KUMAR</h2>
+                        <p>General Secretary Technical Board</p>
+                        <div class="social-coord">
+                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="../assets/data/anuragSir.jpg" alt="">
+                        <h2>MR. ANURAG<br>TIWARI</h2>
+                        <p>CLUB COORDINATOR</p>
+                        <div class="social-coord">
+                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================================================PROJECTS================================================= -->
+
+        <section class="showcase" id="projects">
+            <h1 class="aboutus"><span>P</span>roject<span>S</span></h1>
+            <div>
+                <div class="rowed rowed1">
+                    <div class="img-box">
+                        <img src="../assets/data/image1.jpg" alt="myproject1">
+                    </div>
+                    <div class="text-box">
+                        <h2 class="lg-heading text-black">Lorem</h2>
+                        <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti
+                            fuga accusamus porro recusandae quibusdam ex doloremque dolorum optio quae? Beatae iure
+                            commodi, iste debitis velit quo sapiente dolor soluta!</p>
+                        <!-- <a href="#">More</a> -->
+                    </div>
+                </div>
+                <div class="rowed rowed2">
+                    <div class="img-box">
+                        <img src="../assets/data/image2.jpg" alt="myproject2">
+                    </div>
+                    <div class="text-box">
+                        <h2 class="lg-heading text-black">Lorem</h2>
+                        <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti
+                            fuga accusamus porro recusandae quibusdam ex doloremque dolorum optio quae? Beatae iure
+                            commodi, iste debitis velit quo sapiente dolor soluta!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--===========================================OTHER CLUBS===============================================-->
+
+    <footer>
+        <div class="ot-club reveal">
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+                    <h1 class="aboutus"><span>O</span>ther Club<span>S</span></h1>
+
+                    <div class="col-12 club-links">
+                        <ul>
+                            <li><a href="/coding">PyC Community</a></li>
+                            <li><a href="/web">WebVerse</a></li>
+                            <li><a href="/android">Mobile App Development</a></li>
+                            <li><a href="/ai">AI/ML</a></li>
+                            <li><a href="/blockchain">BlockChain</a></li>
+                            <li><a href="/robotics">Robotics</a></li>
+                            <li><a href="/electronics">Electronics</a></li>
+                            <li><a href="/ecell">E-Cell</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================SOCIAL MEDIA=============================================== -->
+
+        <div class="social-media">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+        <p>LSec &copy; 2022, All Rights Reserved</p>
+    </footer>
+
+    <script type="text/javascript" src="./js/cyber.js"></script>
+</body>
+
+</html>
