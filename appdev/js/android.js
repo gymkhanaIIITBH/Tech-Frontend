@@ -37,7 +37,7 @@ const links=document.getElementById("coord-links")
 
 
 function expand(){
-  coordinator.style.height="70%";
+  coordinator.style.height= $(window).width() < 789 ? "60%" : "70%";
   button1.style.display="none";
   button2.style.display="block";
   image.style.height="25%";
