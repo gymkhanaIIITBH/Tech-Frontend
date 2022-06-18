@@ -31,6 +31,10 @@ function ResourceFetch(club) {
     .then((res) => {
       if (res.status == 0) {
         DataDisplay(res.data);
+      } else {
+        var html = ``;
+        html = `<h1>Unable to fetch</h1>`;
+        DataStore.innerHTML = html;
       }
     })
     .catch((err) => {
@@ -44,7 +48,7 @@ ResourceFetch('WebVerse');
 
 function DataDisplay(data) {
   var html = ``;
-  if(data.length==0){
+  if (data.length == 0) {
     html = `<h1>Data is not updated</h1>`
   }
   for (let i = 0; i < data.length; i++) {
