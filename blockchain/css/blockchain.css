@@ -18,7 +18,7 @@ body {
   height: 100vh;
 }
 
-.navdesign img{
+.navdesign img {
   margin: auto;
   width: 200px;
   height: 150px;
@@ -27,16 +27,14 @@ body {
   padding-right: 20px;
 }
 
-.navdesign a:hover
-{
-    opacity: 0.5;
+.navdesign a:hover {
+  opacity: 0.5;
 }
-.navdesign:hover
-{
-    transform: translateY(+5px);
+.navdesign:hover {
+  transform: translateY(+5px);
 }
 
-.containername{
+.containername {
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -71,7 +69,7 @@ nav {
   padding-left: 50px;
 }
 
-.navdesign{
+.navdesign {
   top: 0px;
   left: auto;
   right: auto;
@@ -132,7 +130,7 @@ section {
   text-transform: uppercase;
 }
 
-.GIFS img{
+.GIFS img {
   margin: auto;
   width: 650px;
   height: 400px;
@@ -141,8 +139,7 @@ section {
   padding-left: 30px;
 }
 
-.rightside img:hover
-{
+.rightside img:hover {
   filter: grayscale(1);
   width: 350px;
   height: 250px;
@@ -159,7 +156,7 @@ section {
   margin-top: 10px;
   padding: 30px;
   padding-left: 20px;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 
 .rightside h1 {
@@ -189,7 +186,6 @@ section {
   background: linear-gradient(57deg, #1e4d92, #06a6f0);
 }
 
-
 .newstext {
   text-align: center;
   width: 100%;
@@ -212,26 +208,27 @@ section {
 }
 
 /*///////////*/
-.row{
+.row {
   display: flex;
   justify-content: space-between;
 }
-#about{
+#about {
   color: white;
 }
 
 .membercnt {
-  display: inline-block;
   color: rgb(255, 255, 255);
-  width: fit-content;
-  height: 100%;
+  width: 100%;
+  height: auto;
   margin: auto;
   align-items: center;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 .cnt {
+  z-index: 1;
   align-items: center;
   text-align: center;
   padding: 2%;
@@ -256,7 +253,7 @@ section {
   font-size: 42px;
 }
 
-.teammembers{
+.teammembers {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -291,8 +288,8 @@ section {
   margin: 00px 00px 1px 0px;
 }
 
-.post{
-    color: white;
+.post {
+  color: white;
 }
 /*///////////*/
 
@@ -307,6 +304,7 @@ section {
 .club-links ul {
   display: flex;
   flex-wrap: wrap;
+  gap:10px;
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -320,7 +318,7 @@ section {
   margin-bottom: 3%;
   color: #fff;
 }
-.otherclubs{
+.otherclubs {
   font-size: 36px;
   font-weight: 600;
   color: #f2f2f8f1;
@@ -360,11 +358,68 @@ section {
 .social-links a:hover {
   color: #5de70d;
 }
-.text-center-bottom{
-  color : grey;
+.text-center-bottom {
+  color: grey;
   text-align: center;
   font-size: 25px;
   font-weight: 400;
   align-items: center;
   margin: 2% auto;
+}
+
+#membercountdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 789px) {
+  .navdesign {
+    padding: 0;
+  }
+
+  .navdesign img {
+    width: 100px;
+    height: 75px;
+  }
+
+  .linear {
+    text-align: left;
+    font-size: 10px;
+  }
+
+  section {
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height:auto;
+  }
+
+  .leftside {
+    width: 100%;
+    overflow: auto;
+    border-radius: 20px;
+    margin-left: 0;
+    margin-top:0;
+  }
+
+  .GIFS img {
+    object-fit: cover;
+    padding-left: 0;
+    width: 100%;
+    border-radius: 20px;
+    height:auto;
+  }
+.rightside {
+  width:100%;
+  height: auto;
+}
+  .rightside p {
+    text-align: center;
+  }
+
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
