@@ -43,6 +43,30 @@ body {
   color: white;
 }
 
+.alertmessage{
+  background-color: white;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  font-size: 24px;
+  width: 100%;
+  display: none;
+  z-index: 1060;
+}
+
+.alertmessage .MessageSuccess{
+  background-color: rgb(121, 160, 63);
+  height: 50px;
+  padding: 5px;
+}
+
+.alertmessage .MessageFailure{
+  background-color: rgb(103, 27, 4);
+  height: 50px;
+  padding: 5px;
+}
+
 .bodyelement {
   margin-top: 130px;
 }

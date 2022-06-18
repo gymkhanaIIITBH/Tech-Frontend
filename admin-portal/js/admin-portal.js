@@ -17,6 +17,30 @@ var ResouceDataShow = document.getElementById('ResouceDataShow');
 var NewsDataShow = document.getElementById('NewsDataShow');
 
 
+// Message 
+var message = document.getElementById('message');
+
+function messageshow(s) {
+  message.style.display = 'block';
+  var html;
+  if (s === 'Success') {
+    html = `<div class="MessageSuccess" >
+              <strong>Successfully updated</strong>
+          </div>`
+  } else if (s === 'Failure') {
+    html = `<div class="MessageFailure" >
+              <strong>Opps!</strong> Unable to update
+          </div>`
+  } else {
+    html = `<div class="MessageFailure" >
+    <strong>Opps!</strong> something is wrong
+</div>`
+  }
+  message.innerHTML = html;
+  setTimeout(() => {
+    message.style.display = 'none';
+  }, 2000);
+}
 
 
 var dataChange = document.querySelectorAll(".data-change");
@@ -260,7 +284,7 @@ function DataDisplayNews(news) {
               <div class="newsheading">
                   ${news[i].topic}
               </div>
-              <span data-bs-toggle="modal" data-bs-target="#DeleteNews" id="${ news[i]._id }"
+              <span data-bs-toggle="modal" data-bs-target="#DeleteNews" id="${news[i]._id}"
                   onclick="NewsDelete(this.id)" style="font-size:20px; cursor: pointer;">
                   <i class="fa fa-trash"></i>
               </span>
@@ -277,3 +301,178 @@ function DataDisplayNews(news) {
   }
   NewsDataShow.innerHTML = html;
 }
+
+// Social Link update form 
+
+document.getElementById('socialLinkUpdate').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/update/sociallink`, {
+    method: 'POST',
+    headers: {
+      'auth_token': `${localStorage.getItem('token')}`
+    },
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchUser();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+// Resource add form 
+document.getElementById('ResourceForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/resource/addData/${logindata['club']}`, {
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchResource();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+
+// Delete Resource 
+document.getElementById('DeleteResourceForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/resource/ResourceDelete/${logindata['club']}`, {
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchResource();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+// Add News
+document.getElementById('NewsForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/news/newsadd`, {
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchNewsData();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+// Delete News
+document.getElementById('DeleteNewsForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/news/Newsdelete`, {
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchNewsData();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+
+
+// Update password
+document.getElementById('changePasswordForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/update/changep/${logindata['username']}`, {
+    method: 'POST',
+    body: new URLSearchParams(new FormData(e.target)),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+// certificate upload
+document.getElementById('certAddForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/cert/certAdd/${logindata['username']}`, {
+    method: 'POST',
+    body: new FormData(e.target),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
+
+// Update Image
+document.getElementById('changeImageForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/update/imageUpload/${logindata['username']}`, {
+    method: 'POST',
+    body: new FormData(e.target),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow('Success');
+        fetchUser();
+      } else {
+        messageshow('Failure');
+      }
+    })
+    .catch((err) => {
+      messageshow('Error');
+    })
+})
+
