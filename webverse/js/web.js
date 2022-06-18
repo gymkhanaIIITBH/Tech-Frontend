@@ -30,6 +30,9 @@ var navLinks = document.getElementById("navLinks");
     
     function showmenu()
 {
+    if($("#navLinks").css("display") === "none") {
+      $("#navLinks").css("display", "");
+    }
     navLinks.style.right="0";
 }
 function hidemenu()
@@ -193,3 +196,9 @@ function showPage() {
   document.querySelector("content").style.display = "block";
 }
 */
+
+$(document).ready(function() {
+  if($(window).width() < 789) {
+    $('#navLinks').css("display",'none');
+  }
+})
