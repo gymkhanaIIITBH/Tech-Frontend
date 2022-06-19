@@ -476,3 +476,11 @@ document.getElementById('changeImageForm').addEventListener('submit', (e) => {
     })
 })
 
+
+
+// Logout Function
+
+function Funclogout(){
+  localStorage.removeItem('token');
+  window.location.reload();
+}
