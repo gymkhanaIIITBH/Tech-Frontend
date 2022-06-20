@@ -4,31 +4,31 @@ html = `
         <a href="/">
             <p>home</p>
         </a>
-        <a href="/web">
+        <a href="/webverse/web.html">
             <p>Webverse</p>
         </a>
-        <a href="/ai">
+        <a href="/ai/ai.html">
             <p>AIML</p>
         </a>
         <a href="/coding">
             <p>PyC</p>
         </a>
-        <a href="/android">
+        <a href="/appdev/android.html">
             <p>Android</p>
         </a>
-        <a href="/robotics">
+        <a href="/robotics/robotics.html">
             <p>Robosapiens</p>
         </a>
-        <a href="/blockchain">
+        <a href="/blockchain/blockchain.html">
             <p>Blockchain</p>
         </a>
-        <a href="/electronics">
+        <a href="/electronics/electronics.html">
             <p>Electronics</p>
         </a>
-        <a href="/cyber">
+        <a href="/cyber/cyber.html">
             <p>Cyber</p>
         </a>
-        <a href="/ecell">
+        <a href="/ecell/ecell.html">
             <p>E-Cell</p>
         </a>
 `
