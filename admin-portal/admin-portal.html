@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css">
     <link rel="stylesheet" href="./css/admin-portal.css">
+    <link rel="stylesheet" href="../template/Block.css">
 
     <!-- Import JS -->
     <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="./js/admin-portal.js"></script>
+    <script defer src="../template/Block.js"></script>
 </head>
 
 <body>
 
+    <div class="block"></div>
 
     <div class="headfix">
         <div class="header text-center">
@@ -42,7 +45,7 @@
                 </div>
                 <div class="logout">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#changePassword">Change Password</a>
-                    <a href="/logout">Logout</a>
+                    <a href="#" onclick="Funclogout()">Logout</a>
                 </div>
             </div>
         </div>

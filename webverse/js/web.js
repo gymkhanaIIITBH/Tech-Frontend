@@ -1,3 +1,5 @@
+const url = `http://localhost:5000`;
+
 /*
 $('.count').each(function () {
   $(this).prop('Counter',0).animate({
@@ -11,10 +13,11 @@ $('.count').each(function () {
   });
 });
 */
-setTimeout(() => {;
-  window.addEventListener("scroll", function (){
+setTimeout(() => {
+  ;
+  window.addEventListener("scroll", function () {
     $('.count').each(function () {
-      $(this).prop('Counter',0).animate({
+      $(this).prop('Counter', 0).animate({
         Counter: $(this).text()
       }, {
         duration: 4000,
@@ -27,24 +30,22 @@ setTimeout(() => {;
   })
 }, 1000);
 var navLinks = document.getElementById("navLinks");
-    
-    function showmenu()
-{
-    if($("#navLinks").css("display") === "none") {
-      $("#navLinks").css("display", "");
-    }
-    navLinks.style.right="0";
+
+function showmenu() {
+  if ($("#navLinks").css("display") === "none") {
+    $("#navLinks").css("display", "");
+  }
+  navLinks.style.right = "0";
 }
-function hidemenu()
-{
-    /*navLinks.style.right="-200px";*/
-    navLinks.style.right= "500%";
+function hidemenu() {
+  /*navLinks.style.right="-200px";*/
+  navLinks.style.right = "500%";
 }
 
 //text animation
 // Particle js animation
 particlesJS("particles-js", {
-  
+
   particles: {
     number: {
       value: 355,
@@ -160,14 +161,14 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
-      rotate: 40,
-      stretch: 0,
-      depth: 200,
-      modifier: 1,
-      slideShadows: true,
+    rotate: 40,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
   },
   pagination: {
-      el: ".swiper-pagination",
+    el: ".swiper-pagination",
   },
   loop: true,
 });
@@ -197,8 +198,66 @@ function showPage() {
 }
 */
 
-$(document).ready(function() {
-  if($(window).width() < 789) {
-    $('#navLinks').css("display",'none');
+$(document).ready(function () {
+  if ($(window).width() < 789) {
+    $('#navLinks').css("display", 'none');
   }
 })
+
+
+// Coordinator Detail Fetch Method
+
+var coord = document.getElementById('coordinator');
+
+const fetchCoordinator = () => {
+  fetch(`${url}/api/club/web`)
+    .then((res) => res.json())
+    .then((res) => {
+     
+      if (res.status === 0) {
+       
+        UpdateCoordinator(res.data);
+      }
+    })
+    .catch()
+}
+
+fetchCoordinator();
+
+
+const UpdateCoordinator = (data) => {
+  var html = ``;
+  for (i in data) {
+    var img = arrayBufferToBase64(data[i]['image'].data.data);
+    var imgSrc = `data:image/${data[i].image.contentType};base64,${img.toString('base64')}`;
+    html += `
+      <div class="col-lg-6">
+        <div class="member d-flex align-items-start aos-init aos-animate" data-aos="zoom-in"
+            data-aos-delay="100">
+            <div class="pic">
+                <img src="${imgSrc}" class="img-fluid" id="img1" alt="">
+            </div>
+            <div class="member-info">
+                <h4>${data[i]['fname']} ${data[i]['lname']}</h4>
+                <span>Coordinator</span>
+                <div class="social">
+                    <a href="${data[i]['github']}" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="${data[i]['instagram']}" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="${data[i]['linkedIn']}" target="_blank"><i class="fa fa-linkedin"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+      `
+  }
+
+  coord.innerHTML = html;
+}
+
+// buffer to binary convert
+const arrayBufferToBase64 = (buffer) => {
+  var binary = '';
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => binary += String.fromCharCode(b));
+  return window.btoa(binary);
+};
