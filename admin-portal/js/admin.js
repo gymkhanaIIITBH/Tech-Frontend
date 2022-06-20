@@ -12,6 +12,7 @@ document.forms["formDetails"].addEventListener("submit", (event) => {
       console.log(body);
       if(body.status==0){
         localStorage.setItem('token',`${body.auth_token}`)
+        pCheck.innerText = "";
         window.location.href = './admin-portal.html'
       }else{
         pCheck.innerText = "Wrong Username or Password!!";
