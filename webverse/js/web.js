@@ -232,7 +232,7 @@ const UpdateCoordinator = (data) => {
     var imgSrc = `data:image/${data[i].image.contentType};base64,${img.toString('base64')}`;
     html += `
       <div class="col-lg-6">
-        <div class="member d-flex align-items-start aos-init aos-animate" data-aos="zoom-in"
+        <div class="member d-flex align-items-center justify-content-center aos-init aos-animate" data-aos="zoom-in"
             data-aos-delay="100">
             <div class="pic">
                 <img src="${imgSrc}" class="img-fluid" id="img1" alt="">

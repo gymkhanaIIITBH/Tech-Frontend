@@ -281,16 +281,16 @@ body {
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  /* background: #fff; */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .team .member .member-img {
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
+  /* position: relative; */
+  /* overflow: hidden; */
+  width: 100%;
   height: auto;
 }
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   #img2 {
     margin-left: -40px !important;
   }
@@ -299,7 +299,7 @@ body {
   max-height: 448px;
   min-width: 182px;
   margin-left: -16px;
-}
+} */
 @media (min-width: 992px) {
   .col-lg-6 {
     flex: 0 0 auto;
@@ -319,7 +319,7 @@ body {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 23px;
-  color: #37517e;
+  color: #1e63da;
   font-family: "Jost", sans-serif;
 }
 .pic {
@@ -329,15 +329,15 @@ body {
   vertical-align: middle;
 }
 #img1 {
-  max-height: 249px;
-  min-width: 303px;
-  margin-left: -60px;
+  width: 620px;
+  height: 200px;
+  /* margin-left: -60px; */
 }
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   #img1 {
     margin-left: -90px !important;
   }
-}
+} */
 .team .member .member-info {
   padding-left: 30px;
 }
@@ -362,6 +362,7 @@ body {
   background: #eff2f8;
   color: #47b2e4;
   text-decoration: none;
+  margin: auto 2%;
 }
 
 .team .member .member-info {
@@ -594,11 +595,11 @@ body {
     padding: 30px;
   }
   .logos li {
-    left: 33% !important;
+    left: 20% !important;
     top: 2.5% !important;
     position: absolute !important;
 
-    font-size: 26px !important;
+    font-size: 24px !important;
   }
 
   .logos span1 {
@@ -1084,7 +1085,7 @@ body {
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.09em; /* Adjust as needed */
+  letter-spacing: 0.05em; /* Adjust as needed */
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 @media (max-width: 790) {
