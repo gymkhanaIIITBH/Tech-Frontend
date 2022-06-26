@@ -58,7 +58,6 @@ $("#close-overlay-cord").on("click", () => {
 });
 
 function DeleteCordOver(id) {
-  console.log(id);
   document.getElementById("cordDeleteId").value = id;
   document.getElementById("Cord-overlay").style.display = "block";
   // $("#Cord-overlay").css("display","block");
@@ -227,3 +226,27 @@ function funcLogout() {
   localStorage.removeItem("token1");
   window.location.reload();
 }
+
+
+// Delete coordinator
+document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(`${url}/api/update/deleteCordinator`, {
+    method: "POST",
+    headers :{
+      auth_token:`${localStorage.getItem('token1')}`
+    },
+    body: new URLSearchParams(new FormData(e.target))
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.status == 0) {
+        messageshow("Success");
+      } else {
+        messageshow("Failure");
+      }
+    })
+    .catch((err) => {
+      messageshow("Error");
+    });
+});
