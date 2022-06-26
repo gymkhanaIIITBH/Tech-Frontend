@@ -146,13 +146,11 @@ body {
 }
 
 .section-padding {
-  margin-top: 90px;
+  margin-top: 10px;
 }
 
 .container-fluid {
-  padding-top: 29vh;
-  width: 100%;
-  height: 30vh;
+  padding:  10px;
 }
 
 .membercnt :hover {
@@ -176,16 +174,19 @@ body {
 }
 
 .main {
+  display: flex;
+  flex-wrap: wrap;
   height: fit-content;
   align-items: center;
+  justify-content: center;
   /* background-color: #c4c4c4; */
   padding: 3%;
   padding-top: 12%;
 }
 .img-responsive {
-  width: 30%;
-  float: right;
-  height: auto;
+  width:250px;
+  /* float: right; */
+  height: 250px;
   padding-right: 20px;
   /* border-radius: 7%; */
 }
@@ -199,6 +200,7 @@ body {
   /* background-color: #c4c4c4; */
   border-radius: 50px;
   color: #fff;
+  height: fit-content;
 }
 .container h3 {
   color: #0ec9ac;
@@ -245,14 +247,16 @@ body {
   font-weight: 600;
 }
 .membercnt {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   color: rgb(255, 255, 255);
 }
 .cnt {
   align-items: center;
   text-align: center;
   padding: 2%;
-  /* background-color: #c4c4c4; */
   height: fit-content;
   min-height: 200px;
   min-width: 200px;
@@ -271,11 +275,16 @@ body {
   font-weight: 600;
   font-size: 42px;
 }
-/*-----himanshu, kanishk------code end----*/
-/*shubham and souvik*/
+
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+
+.team{
+  margin-top: 100px;
+}
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -614,12 +623,6 @@ body {
   }
 }
 /*intro text*/
-.name-container h3 {
-  font-family: "Poppins", sans-serif;
-  font-size: 10vmin;
-  text-align: left;
-  line-height: 20vmin;
-}
 
 .name-container .gradient-text {
   font-size: 32px;
@@ -727,6 +730,11 @@ body {
   color: white;
   font-weight: bold;
 }
+.logosfooter li{
+  left: 0;
+  text-align: center;
+}
+
 .logos a {
   text-decoration: none;
 }
@@ -773,14 +781,11 @@ body {
   margin-right: auto;
 }
 
-.name-container h3 {
-  padding-left: 8%;
-  font-family: "Kalam", cursive;
-}
 .name-container h4 {
   padding-left: 8%;
   text-align: center;
   font-family: "Kalam", cursive;
+  width: 100%;
 }
 
 @media (max-width: 790px) {
@@ -795,7 +800,7 @@ body {
   .waviy {
     position: relative;
     -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-    font-size: 60px;
+    font-size: 30px;
   }
   .waviy span {
     font-family: "Alfa Slab One", cursive;
@@ -821,6 +826,7 @@ body {
 .about-us {
   /* background-color:  #151719; */
   display: flex;
+  width: 100%;
   justify-content: center;
   position: relative;
   left: -10px;
@@ -874,11 +880,12 @@ body {
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .great {
-  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px auto ;
+  padding: 10px;
 }
 @media (max-width: 790px) {
   .great h1 {
@@ -979,7 +986,8 @@ body {
 
 .great h1 {
   font-family: "Montserrat Medium";
-  max-width: 40ch;
+  font-size: 24px;
+  /* max-width: 40ch; */
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -1079,15 +1087,21 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&family=Marcellus+SC&family=Ms+Madi&family=My+Soul&family=Playball&family=Rancho&family=Signika:wght@700&family=Spline+Sans+Mono:wght@500&family=Square+Peg&display=swap");
 .name-container h3 {
   font-family: "Signika", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-weight: 900px;
-  /*font-family: 'Spline Sans Mono', monospace;*/
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.05em; /* Adjust as needed */
+  font-size: 50px;
+  text-align: center;
+  overflow: hidden;
+  border-right: 0.15em solid orange; 
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  padding: 0px 0px 10px 0px;
 }
+
+
+
 @media (max-width: 790) {
   .name-container h3 {
     width: 50% !important;
@@ -1127,7 +1141,7 @@ body {
 
 @media (max-width: 790px) {
   .section-title {
-    padding-top: 84%;
+    padding-top: 10px;
   }
 }
 
@@ -1396,7 +1410,7 @@ footer {
 }
 .footer-widget .logos li {
   margin-top: -24px;
-  margin-left: 60px;
+  
 }
 .footer-widget ul li {
   display: inline-block;
@@ -1458,56 +1472,10 @@ footer {
   color: #878787;
 }
 
-/*slider*/
-.swiper {
-  width: 100%;
-  padding-top: 500px !important;
-  padding-bottom: 200px !important;
-}
-@media (max-width: 790px) {
-  .swiper {
-    margin-top: 70%;
-    width: 100%;
-    padding-top: 500px !important;
-    padding-bottom: 200px !important;
-  }
-}
-.swiper h3 {
-  text-align: center;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px !important;
-  height: 300px !important;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, #0006);
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-/* target the active bullet */
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: white;
-  opacity: 1;
-}
-
-/* target all bullets */
-.swiper-pagination-bullet {
-  background-color: red;
-  opacity: 1;
-}
 
 @media only screen and (max-width: 789px) {
   .name-container h3 {
-    font-size: 4.5vw;
+    font-size: 25px;
   }
 
   .name-container .gradient-text {
@@ -1520,7 +1488,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     overflow-x: hidden;
   }
   .waviy {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 /*-----shreya mishra, mrigank ,akanksha chaurasia ,jeevesh rai-----*/
