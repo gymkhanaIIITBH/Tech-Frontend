@@ -106,6 +106,7 @@ input4.addEventListener("keydown", function () {
 function ResourseDelete(id) {
   document.getElementById('tittleDeleteR').value = id;
 }
+
 function NewsDelete(id) {
   document.getElementById('tittleDeleteN').value = id;
 }
@@ -185,15 +186,6 @@ function setdata(data) {
   }
 }
 
-// buffer to binary convert
-const arrayBufferToBase64 = (buffer) => {
-  var binary = '';
-  var bytes = [].slice.call(new Uint8Array(buffer));
-  bytes.forEach((b) => binary += String.fromCharCode(b));
-  return window.btoa(binary);
-};
-
-
 // Fetch resource data
 
 const fetchResource = () => {
@@ -270,7 +262,6 @@ const fetchNewsData = () => {
       NewsDataShow.innerHTML = html;
     })
 }
-
 
 function DataDisplayNews(news) {
   var html = ``;
@@ -412,8 +403,6 @@ document.getElementById('DeleteNewsForm').addEventListener('submit', (e) => {
     })
 })
 
-
-
 // Update password
 document.getElementById('changePasswordForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -454,7 +443,6 @@ document.getElementById('certAddForm').addEventListener('submit', (e) => {
     })
 })
 
-
 // Update Image
 document.getElementById('changeImageForm').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -475,8 +463,6 @@ document.getElementById('changeImageForm').addEventListener('submit', (e) => {
       messageshow('Error');
     })
 })
-
-
 
 // Logout Function
 

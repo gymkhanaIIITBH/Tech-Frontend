@@ -8,20 +8,20 @@
     <title>GS Portal</title>
 
     <!-- Import CSS -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/gs-portal.css">
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/gs-portal.css">
     <link rel="stylesheet" href="../template/Block.css">
 
     <!-- Import JS -->
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src="../public/js/gs-portal.js"></script>
+    <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="./js/gs-portal.js"></script>
     <script defer src="../template/Block.js"></script>
 </head>
 
 <body>
-    
+
     <div class="block"></div>
 
 
@@ -31,7 +31,7 @@
                 <h5>Add Coordinators</h5>
                 <i class="fa fa-close" id="close-overlay"></i>
             </div>
-            <form  class="form" action="/register/<%=post%>" method="post" enctype="multipart/form-data">
+            <form class="form" id="addCoordForm" method="post" enctype="multipart/form-data">
                 <input class="form-input" name="fname" type="text" placeholder="First Name" required>
                 <input class="form-input" name="lname" type="text" placeholder="Last Name" required>
                 <input class="form-input" name="username" type="text" placeholder="User Name" required>
@@ -59,7 +59,7 @@
                 <h5>Change Password</h5>
                 <i class="fa fa-close" id="close-overlay-pssd"></i>
             </div>
-            <form  class="form" action="/changepgs/<%=post%>" method="post">
+            <form class="form" id="changePasswordForm" method="post">
                 <input class="form-input" name="password" type="password" placeholder="Current Password" required>
                 <input class="form-input" name="npassword" type="password" placeholder="New Password" required>
                 <input class="form-input" name="cpassword" type="password" placeholder="Confirm Password" required>
@@ -73,7 +73,7 @@
                 <h5>Password</h5>
                 <i class="fa fa-close" id="close-overlay-cord"></i>
             </div>
-            <form  class="form" action="/deleteCordinator/<%=post %>" method="POST" >
+            <form class="form" action="/deleteCordinator/<%#=post %>" method="POST">
                 <input class="form-input" name="id" id="cordDeleteId" type="text" hidden>
                 <input class="form-input" name="password" type="password" placeholder="Password" required>
                 <input class="form-submit" type="submit" value="Confirm">
@@ -82,7 +82,7 @@
     </div>
     <section class="top-header">
         <div class="logo">
-            <img src="../public/data/150dpi (1) (1).png" alt="logo">
+            <img src="../assets/data/150dpi (1) (1).png" alt="logo">
         </div>
         <div class="heading">
             <h1>Welcome to GS Management Portal</h1>
@@ -90,15 +90,14 @@
         <div class="login-details">
             <div class="login-user">
                 <div class="heading">
-                    <h5>Hi, Mr. <%=fname%>
+                    <h5>Hi, Mr. <span id="fname"></span>
                     </h5>
                 </div>
-                <img class="user-img" src="data:img/<%=img.contentType%>;base64,
-                <%=img.data.toString('base64')%>">
+                <img class="user-img" id="gsImage">
             </div>
             <div class="hidden-options">
                 <a href="#" id="chng-password">Change Password</a>
-                <a href="/gslogout/<%=post%>">Logout</a>
+                <a href="#" onclick="funcLogout();">Logout</a>
             </div>
         </div>
     </section>
@@ -107,14 +106,14 @@
             <div class="nav-item"><a href="#">Home</a></div>
             <div class="nav-item"><a href="#" id="add-coord">Add Coordinators Details</a></div>
             <div class="nav-item"><a href="#">Manage Club Timings</a></div>
-            <div class="nav-item"><a href="/gslogout/<%=post%>">Logout</a></div>
+            <div class="nav-item" onclick="funcLogout();"><a href="#">Logout</a></div>
         </div>
     </section>
     <section class="main">
+        <div class="alertmessage" id="message"></div>
         <div class="user-details card" id="home">
             <div class="user-image">
-                <img class="img w-100" src="data:img/<%=img.contentType%>;base64,
-                <%=img.data.toString('base64')%>">
+                <img class="img w-100" id="gsImage">
             </div>
             <div class="u-details">
                 <div class="row">
@@ -122,84 +121,77 @@
                         <h6>Name:</h6>
                     </div>
                     <div class="col-10">
-                        <span>Mr. <%=fname+" "+lname%></span>
+                        <span id="fullName"></span>
                     </div>
                 </div>
                 <div class=" row">
-                                <div class="col-2">
-                                    <h6>Post:</h6>
-                                </div>
-                                <div class="col-10">
-                                    <% if(post=="tech" ){%>
-                                        <span>General Secretary Technical Board</span>
-                                        <% }else if(post=="cult" ){%>
-                                            <span>General Secretary Cultural Board</span>
-                                            <% }else if(post=="sports" ){%>
-                                                <span>General Secretary Sports Board</span>
-                                                <%}%>
-                                </div>
+                    <div class="col-2">
+                        <h6>Post:</h6>
                     </div>
+                    <div class="col-10" id="postShow"></div>
                 </div>
             </div>
-            <div class="change-details card mt-4">
-                <div class="heading">
-                    <h5>Coordinators Details</h5>
-                </div>
-                <form action="/findDetails/<%=post%>" method="post">
-                    <select class="form-input" name="club" required>
-                        <option disabled selected>Select Club</option>
-                        <option value="PyC">PyC Community</option>
-                        <option value="WebVerse">WebVerse</option>
-                        <option value="Robosapiens">Robosapiens</option>
-                        <option value="AIML">AI/ML</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Cyber">Cyber Security</option>
-                        <option value="Android">Android</option>
-                        <option value="Blockchain">Blockchain</option>
-                    </select>
-                    <input type="submit" value="Search">
-                </form>
-                <div class="cdt-details">
-                    <div class="row">
-                        <div class="col-2">
-                            <h6>S. No.</h6>
-                        </div>
-                        <div class="col-4">
-                            <h6>Name</h6>
-                        </div>
-                        <div class="col-4">
-                            <h6>Email</h6>
-                        </div>
-                        <div class="col-2">
-                            <h6>Action</h6>
-                        </div>
+        </div>
+        <div class="change-details card mt-4">
+            <div class="heading">
+                <h5>Coordinators Details</h5>
+            </div>
+            <form id="clubFind" method="post">
+                <select class="form-input" name="club" required>
+                    <option disabled selected>Select Club</option>
+                    <option value="PyC">PyC Community</option>
+                    <option value="WebVerse">WebVerse</option>
+                    <option value="Robosapiens">Robosapiens</option>
+                    <option value="AIML">AI/ML</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Cyber">Cyber Security</option>
+                    <option value="Android">Android</option>
+                    <option value="Blockchain">Blockchain</option>
+                </select>
+                <input type="submit" value="Search">
+            </form>
+            <div class="cdt-details">
+                <div class="row brdr">
+                    <div class="col-2">
+                        <h6>S. No.</h6>
                     </div>
-                    <% var x=1; %>
-                        <% for(var i=0;i<result.length;i++) { %>
+                    <div class="col-4">
+                        <h6>Name</h6>
+                    </div>
+                    <div class="col-4">
+                        <h6>Email</h6>
+                    </div>
+                    <div class="col-2">
+                        <h6>Action</h6>
+                    </div>
+                </div>
+                <div id="showDetails"></div>
+                <!-- <%# var x=1; %>
+                        <%# for(var i=0;i<result.length;i++) { %>
                             <div class="row">
                                 <div class="col-2">
                                     <span>
-                                        <%=x%>
+                                        <%#=x%>
                                     </span>
                                 </div>
                                 <div class="col-4">
                                     <span>
-                                        <%=result[i].fname+" "+result[i].lname%></span>
+                                        <%#=result[i].fname+" "+result[i].lname%></span>
                             </div>
                             <div class=" col-4">
                                             <span>
-                                                <%=result[i].email%>
+                                                <%#=result[i].email%>
                                             </span>
                                 </div>
                                 <div class="col-2 icons">
-                                    <div class="deleteCord" id="<%= result[i]._id%>" onclick="DeleteCordOver(this.id)" style="cursor: pointer;">
+                                    <div class="deleteCord" id="<%#= result[i]._id%>" onclick="DeleteCordOver(this.id)" style="cursor: pointer;">
                                         <i class="fa fa-trash"></i>
                                     </div>
                                 </div>
                             </div>
-                            <% x++; }%>
-                </div>
+                            <%# x++; }%> -->
             </div>
+        </div>
     </section>
 </body>
 

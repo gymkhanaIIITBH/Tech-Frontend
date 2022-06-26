@@ -1,4 +1,4 @@
-var passwordCheck=document.querySelector('.password-check');
+var passwordCheck = document.querySelector(".password-check");
 document.forms["gsLogin"].addEventListener("submit", (event) => {
   event.preventDefault();
   fetch(event.target.action, {
@@ -7,9 +7,17 @@ document.forms["gsLogin"].addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((body) => {
-        passwordCheck.innerText=body.passwordCheck;
-    }).catch((error)=>{
-        passwordCheck.innerText="Something Went Wrong";
-        console.log(error);
+      passwordCheck.innerText = body.passwordCheck;
+      if (body.status == 0) {
+        localStorage.setItem("token1", `${body.auth_token}`);
+        passwordCheck.innerText = "";
+        window.location.href = "./gs-portal.html";
+      } else {
+        passwordCheck.innerText = "Wrong Username or Password!!";
+      }
     })
+    .catch((error) => {
+      passwordCheck.innerText = "Something Went Wrong";
+      console.log(error);
+    });
 });

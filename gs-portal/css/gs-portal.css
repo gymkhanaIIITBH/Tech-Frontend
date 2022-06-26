@@ -162,12 +162,12 @@ body {
   justify-content: center;
 }
 
-.cdt-details .row:nth-child(1) {
+.cdt-details .brdr {
   padding-top: 2%;
   border-bottom: 1px solid #000;
 }
 
-.cdt-details .row:nth-child(2) {
+.cdt-details .row {
   padding-top: 2%;
 }
 
