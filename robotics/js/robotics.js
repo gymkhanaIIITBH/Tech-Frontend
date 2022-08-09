@@ -4,9 +4,9 @@ let togglerchange = document.getElementById('togglerchange');
 function togglerFunc(){
     if(toggling.style.display==="block"){
         toggling.style.display="none";
-        togglerchange.children[0].className="fa fa-regular fa-align-justify";
+        togglerchange.children[0].className="fa fa-align-justify";
     }else{
-        togglerchange.children[0].className="fa fa-regular fa-align-right";
+        togglerchange.children[0].className="fa fa-align-right";
         toggling.style.display="block";
     }
 }
