@@ -1,4 +1,4 @@
-const url = `http://localhost:5000`;
+const url = `https://clubiiitbh.herokuapp.com`;
 
 function myFunction() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {

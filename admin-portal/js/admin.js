@@ -1,8 +1,10 @@
+const url = `https://clubiiitbh.herokuapp.com/api/auth/login`;
+
 var pCheck = document.querySelector(".p-check");
 document.forms["formDetails"].addEventListener("submit", (event) => {
   event.preventDefault();
   console.log(event.target.action)
-  fetch(event.target.action, {
+  fetch(url, {
     method: "POST",
     body: new URLSearchParams(new FormData(event.target)),
   })

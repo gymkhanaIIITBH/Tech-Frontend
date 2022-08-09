@@ -1,3 +1,5 @@
+const url = `https://clubiiitbh.herokuapp.com/api/resource/datasend`;
+
 /* Open the sidenav */
 $(document).ready((x) => {
   $(".sideBarButton").click((_) => {
@@ -26,7 +28,7 @@ var DataStore = document.getElementById('dataStore');
 
 function ResourceFetch(club) {
   clubName.innerHTML = club
-  fetch(`http://localhost:5000/api/resource/datasend/${club}`)
+  fetch(`${url}/${club}`)
     .then((res) => res.json())
     .then((res) => {
       if (res.status == 0) {

@@ -1,4 +1,4 @@
-const url = `http://localhost:5000`;
+const url = `https://clubiiitbh.herokuapp.com`;
 
 var logindata = {};
 
@@ -147,6 +147,14 @@ if (localStorage.getItem('token')) {
   window.location.href = './admin.html'
 }
 
+// buffer to binary convert
+const arrayBufferToBase64 = (buffer) => {
+  var binary = '';
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => binary += String.fromCharCode(b));
+  return window.btoa(binary);
+};
+
 function setdata(data) {
   for (var i = 0; i < username.length; i++) {
     username[i].value = data['username'];
@@ -189,6 +197,7 @@ function setdata(data) {
 // Fetch resource data
 
 const fetchResource = () => {
+  // console.log("fetchResource")
   fetch(`${url}/api/resource/datasendToCord/${logindata['club']}/${logindata['username']}`)
     .then((res) => res.json())
     .then((res) => {

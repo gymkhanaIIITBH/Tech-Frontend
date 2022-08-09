@@ -1,3 +1,5 @@
+const url = 'https://clubiiitbh.herokuapp.com/api/cert/getCert';
+
 var show = document.querySelector(".show");
 var names=document.querySelector('.name .col-8');
 var cID=document.querySelector('.c_id .col-8');
@@ -31,7 +33,7 @@ function showCert(e) {
 
 document.forms["getCert"].addEventListener("submit", (event) => {
   event.preventDefault();
-  fetch(event.target.action, {
+  fetch(url, {
     method: "POST",
     body: new URLSearchParams(new FormData(event.target)),
   })

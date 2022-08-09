@@ -1,3 +1,5 @@
+const url = `https://clubiiitbh.herokuapp.com/api/news/getdata`;
+
 var remainNews = document.querySelector(".remain-news");
 var carouselItemActive = document.querySelector(".carousel-item.active");
 var carouselItemActiveTitle = document.querySelector(
@@ -47,7 +49,7 @@ function showNews(e) {
 }
 
 function news() {
-  fetch("http://localhost:5000/api/news/getdata")
+  fetch(`${url}`)
     .then((res) => res.json())
     .then((body) => {
       showNews(body.news);

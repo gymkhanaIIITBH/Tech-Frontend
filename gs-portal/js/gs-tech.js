@@ -1,7 +1,9 @@
+const url = `https://clubiiitbh.herokuapp.com/api/gs/gsLogin`;
+
 var passwordCheck = document.querySelector(".password-check");
 document.forms["gsLogin"].addEventListener("submit", (event) => {
   event.preventDefault();
-  fetch(event.target.action, {
+  fetch(url, {
     method: "POST",
     body: new URLSearchParams(new FormData(event.target)),
   })
