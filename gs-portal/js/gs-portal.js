@@ -1,4 +1,5 @@
-const url = `https://clubiiitbh.herokuapp.com`;
+const url = `http://localhost:5000`;
+// const url = `https://clubiiitbh.herokuapp.com`;
 
 var loginData = {};
 
@@ -58,6 +59,7 @@ $("#close-overlay-cord").on("click", () => {
 });
 
 function DeleteCordOver(id) {
+  console.log(id);
   document.getElementById("cordDeleteId").value = id;
   document.getElementById("Cord-overlay").style.display = "block";
   // $("#Cord-overlay").css("display","block");
@@ -230,6 +232,7 @@ function funcLogout() {
 
 // Delete coordinator
 document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) => {
+  // console.log("HERE");
   e.preventDefault();
   fetch(`${url}/api/update/deleteCordinator`, {
     method: "POST",
@@ -240,6 +243,7 @@ document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) 
   })
     .then((res) => res.json())
     .then((res) => {
+      // console.log(res);
       if (res.status == 0) {
         messageshow("Success");
       } else {
@@ -247,6 +251,7 @@ document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) 
       }
     })
     .catch((err) => {
+      console.log(err);
       messageshow("Error");
     });
 });
