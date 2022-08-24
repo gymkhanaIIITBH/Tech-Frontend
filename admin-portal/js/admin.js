@@ -3,7 +3,6 @@ const url = `https://clubiiitbh.herokuapp.com/api/auth/login`;
 var pCheck = document.querySelector(".p-check");
 document.forms["formDetails"].addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(event.target.action)
   fetch(url, {
     method: "POST",
     body: new URLSearchParams(new FormData(event.target)),
@@ -11,7 +10,6 @@ document.forms["formDetails"].addEventListener("submit", (event) => {
     .then((res) => res.json())
     .then((body) => {
       pCheck.innerText = body["data"];
-      console.log(body);
       if(body.status==0){
         localStorage.setItem('token',`${body.auth_token}`)
         pCheck.innerText = "";

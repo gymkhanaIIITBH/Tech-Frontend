@@ -42,6 +42,5 @@ document.forms["getCert"].addEventListener("submit", (event) => {
         showCert(body);
     })
     .catch((error) => {
-      console.log(error);
     });
 });

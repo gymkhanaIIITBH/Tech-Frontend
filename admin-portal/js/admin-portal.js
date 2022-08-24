@@ -58,9 +58,7 @@ var input4 = document.querySelector('#NewsnameDelete');
 
 input1.addEventListener("keydown", function () {
   var oldVal = this.value;
-  //   console.log(oldVal);
   var field = this;
-  //   console.log("funciona");
 
   setTimeout(function () {
     if (field.value.indexOf('http://') !== 0) {
@@ -197,7 +195,6 @@ function setdata(data) {
 // Fetch resource data
 
 const fetchResource = () => {
-  // console.log("fetchResource")
   fetch(`${url}/api/resource/datasendToCord/${logindata['club']}/${logindata['username']}`)
     .then((res) => res.json())
     .then((res) => {

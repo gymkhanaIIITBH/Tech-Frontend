@@ -59,7 +59,6 @@ $("#close-overlay-cord").on("click", () => {
 });
 
 function DeleteCordOver(id) {
-  console.log(id);
   document.getElementById("cordDeleteId").value = id;
   document.getElementById("Cord-overlay").style.display = "block";
   // $("#Cord-overlay").css("display","block");
@@ -84,7 +83,6 @@ function fetchGS() {
     .then((body) => {
       if (body.status == 0) {
         loginData = body.data;
-        // console.log(loginData)
         setData(loginData);
         // fetchResource();
         // fetchNewsData();
@@ -94,7 +92,6 @@ function fetchGS() {
       }
     })
     .catch((error) => {
-      // console.log(error)
       localStorage.removeItem("token1");
       window.location.href = "./gs-tech.html";
     });
@@ -107,7 +104,6 @@ if (localStorage.getItem("token1")) {
 
 // Showing The Post
 function showPost(pst) {
-  // console.log(post)
   if (pst == "tech") post.innerText = "General Secretary Technical Board";
   else if (pst == "cult") post.innerText = "General Secretary Cultural Board";
   else if (pst == "sports") post.innerText = "General Secretary Sports Board";
@@ -125,7 +121,6 @@ function setData(data) {
 
 // Showing Coord Details
 function showCoordDetails(data) {
-  // console.log(data)
   var html = ``;
   let x = 1;
   for (var i = 0; i < data.length; i++) {
@@ -169,7 +164,6 @@ document.querySelector("#clubFind").addEventListener("submit", (event) => {
     .then((res) => res.json())
     .then((body) => {
       if (body.status == 0) {
-        console.log(body.data);
         showCoordDetails(body.data);
       } else {
         alert("No Data Found");
@@ -233,7 +227,6 @@ function funcLogout() {
 document
   .querySelector("#DeleteCoordinatorForm")
   .addEventListener("submit", (e) => {
-    console.log("check");
     e.preventDefault();
     fetch(`${url}/api/update/deleteCordinator`, {
       method: "POST",
