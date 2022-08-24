@@ -1,5 +1,6 @@
 // const url = `https://clubiiitbh.herokuapp.com`;
-var url=`http://localhost:5000`;
+const url = `http://localhost:5000`;
+// const url = `https://clubiiitbh.herokuapp.com`;
 
 var loginData = {};
 
@@ -59,6 +60,7 @@ $("#close-overlay-cord").on("click", () => {
 });
 
 function DeleteCordOver(id) {
+  console.log(id);
   document.getElementById("cordDeleteId").value = id;
   document.getElementById("Cord-overlay").style.display = "block";
   // $("#Cord-overlay").css("display","block");
@@ -229,6 +231,7 @@ function funcLogout() {
 }
 
 // Delete coordinator
+<<<<<<< HEAD
 document
   .querySelector("#DeleteCoordinatorForm")
   .addEventListener("submit", (e) => {
@@ -253,3 +256,29 @@ document
         messageshow("Error");
       });
   });
+=======
+document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) => {
+  // console.log("HERE");
+  e.preventDefault();
+  fetch(`${url}/api/update/deleteCordinator`, {
+    method: "POST",
+    headers :{
+      auth_token:`${localStorage.getItem('token1')}`
+    },
+    body: new URLSearchParams(new FormData(e.target))
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      // console.log(res);
+      if (res.status == 0) {
+        messageshow("Success");
+      } else {
+        messageshow("Failure");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      messageshow("Error");
+    });
+});
+>>>>>>> 81633c950bce0b26567791b1d117ea304ca40d4a

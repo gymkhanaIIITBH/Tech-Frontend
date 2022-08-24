@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 // const url = `https://clubiiitbh.herokuapp.com/api/gs/gsLogin`;
 var url = `http://localhost:5000/api/gs/gsLogin`;
+=======
+const url = `http://localhost:5000/api/gs/gsLogin`;
+// const url = `https://clubiiitbh.herokuapp.com/api/gs/gsLogin`;
+>>>>>>> 81633c950bce0b26567791b1d117ea304ca40d4a
 
 var passwordCheck = document.querySelector(".password-check");
 document.forms["gsLogin"].addEventListener("submit", (event) => {
