@@ -1,5 +1,3 @@
-console.log("Working javascript");
-
 document.addEventListener("mousemove", parallax);
 function parallax(e) {
   this.querySelectorAll(".move").forEach((move) => {

@@ -55,7 +55,6 @@ function news() {
       showNews(body.news);
     })
     .catch((error) => {
-      console.log(error);
     });
 }
 

@@ -11,7 +11,6 @@ setTimeout(() => {
     } else {
       $("header").addClass("hello");
     }
-    console.log(window.scrollY);
   });
 }, 10450);
 
