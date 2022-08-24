@@ -1,4 +1,5 @@
-const url = `https://clubiiitbh.herokuapp.com`;
+// const url = `https://clubiiitbh.herokuapp.com`;
+var url=`http://localhost:5000`;
 
 var loginData = {};
 
@@ -167,7 +168,7 @@ document.querySelector("#clubFind").addEventListener("submit", (event) => {
     .then((res) => res.json())
     .then((body) => {
       if (body.status == 0) {
-        // console.log(body.data)
+        console.log(body.data);
         showCoordDetails(body.data);
       } else {
         alert("No Data Found");
@@ -227,26 +228,28 @@ function funcLogout() {
   window.location.reload();
 }
 
-
 // Delete coordinator
-document.querySelector("#DeleteCoordinatorForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch(`${url}/api/update/deleteCordinator`, {
-    method: "POST",
-    headers :{
-      auth_token:`${localStorage.getItem('token1')}`
-    },
-    body: new URLSearchParams(new FormData(e.target))
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      if (res.status == 0) {
-        messageshow("Success");
-      } else {
-        messageshow("Failure");
-      }
+document
+  .querySelector("#DeleteCoordinatorForm")
+  .addEventListener("submit", (e) => {
+    console.log("check");
+    e.preventDefault();
+    fetch(`${url}/api/update/deleteCordinator`, {
+      method: "POST",
+      headers: {
+        auth_token: `${localStorage.getItem("token1")}`,
+      },
+      body: new URLSearchParams(new FormData(e.target)),
     })
-    .catch((err) => {
-      messageshow("Error");
-    });
-});
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.status == 0) {
+          messageshow("Success");
+        } else {
+          messageshow("Failure");
+        }
+      })
+      .catch((err) => {
+        messageshow("Error");
+      });
+  });

@@ -1,4 +1,5 @@
-const url = `https://clubiiitbh.herokuapp.com/api/gs/gsLogin`;
+// const url = `https://clubiiitbh.herokuapp.com/api/gs/gsLogin`;
+var url = `http://localhost:5000/api/gs/gsLogin`;
 
 var passwordCheck = document.querySelector(".password-check");
 document.forms["gsLogin"].addEventListener("submit", (event) => {
