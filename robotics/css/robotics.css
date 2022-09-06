@@ -75,11 +75,9 @@ html {
 }
 
 .wrapper {
-  /* padding-left: 200px; */
   display: flex;
-  flex-wrap: wrap;
-  /* min-height: 40vh; */
-  align-items: right;
+  height: 100vh;
+  align-items: center;
   justify-content: center; 
 }
 .wrapper .static-test {
@@ -88,20 +86,17 @@ html {
   font-weight: 400;
 }
 .wrapper .dynamic-text {
-  /* margin-left: 25px; */
-  /* width: 100%; */
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
   align-items: center;
-  height: 90px;
-  line-height: 90px;
-
-  overflow: hidden;
+  height: fit-content;
 }
-.dynamic-text li {
+
+.dynamic-text h3 {
   font-family: alge;
-  align-items: right;
+  /* align-items: right; */
   justify-content: center;
 
   list-style: none;
@@ -110,11 +105,26 @@ html {
   font-weight: 500;
   position: relative;
   top: 0;
-  animation: slide 12s steps(4) infinite;
+  /* animation: slide 12s steps(4) infinite; */
 }
 
+.dynamic-text li {
+  font-family: alge;
+  /* align-items: right; */
+  justify-content: center;
+
+  list-style: none;
+  color: aqua;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  /* animation: slide 12s steps(4) infinite; */
+}
+
+
 @media (max-width: 992px) {
-  .dynamic-text li {
+  .dynamic-text h3 {
     font-size: 35px;
   }
 }
@@ -126,16 +136,16 @@ html {
 .dynamic-text li span {
   position: relative;
 }
-.dynamic-text li span::after {
+/* .dynamic-text li span::after {
   content: "";
   position: absolute;
   left: 0;
   height: 40vh;
   width: 100%;
-  background: black;
+  background: rgba(0, 0, 0, 0.968);
   border-left: 2px solid aqua;
   animation: typing 8s steps(24) infinite;
-}
+} */
 @keyframes typing {
   40%,
   60% {
@@ -150,7 +160,7 @@ html {
   display: flex;
   list-style: none;
   width: fit-content;
-  justify-content: center;
+  justify-content: flex-end;
   margin: auto 4px;
   color: black;
   padding: 0;
@@ -281,13 +291,6 @@ html {
   box-shadow: 10px 10px 16px aqua;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:flex-end;
-  height: 80vh;
-}
 .primary h1 {
   font-weight: bold;
   font-size: 50px;
@@ -616,7 +619,7 @@ footer {
   -webkit-box-shadow: 8px 8px 10px aqua;
 
   box-shadow: 8px 8px 10px aqua;
-  height: 400px;
+  height: fit-content;
   border-radius: 15px;
   color: aliceblue;
 }
@@ -841,3 +844,109 @@ body{
   display: block;
   width: 200%;
 } */
+
+
+/* Team */
+.team{
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  /* background: #fff; */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.team .member .member-img {
+  /* position: relative; */
+  /* overflow: hidden; */
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 23px;
+  color: #1e63da;
+  font-family: "Jost", sans-serif;
+}
+.pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+#img1 {
+  border-radius: 40px;
+}
+.team .member .member-info {
+  padding-left: 30px;
+}
+.team .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team .member .social a:hover {
+  transform: translate(0, -10%);
+  background-color: #0077b5;
+}
+.team .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #eff2f8;
+  color: #47b2e4;
+  text-decoration: none;
+  margin: auto 2%;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.member-info h4{
+  color: white;
+  font-weight: 700;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+.social .fa-brands {
+  color: black;
+}
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.team .member:hover .social {
+  opacity: 1;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+}
