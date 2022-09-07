@@ -972,3 +972,11 @@ section {
         flex-direction: column;
     }
 }
+
+
+.secondhead{
+    font-size: 24px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 5%;
+}

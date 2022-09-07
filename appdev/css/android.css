@@ -45,7 +45,7 @@ nav ul li a:hover{
 }
 .sidebar {
   float: left;
-  position: absolute;
+  position: fixed;
   left:-19.5%;
   width: 18%;
   height: 110%;
@@ -63,15 +63,18 @@ nav ul li a:hover{
   padding-left: 13%;
   width: 30%;
   height: 100%;
-  background: rgb(30, 29, 29);
+  background: rgb(30, 29, 29,0);
   transition:all 0.4s linear;
 }
 .sidebar ul{
-  margin-top: 30%;
+  margin-top: 5%;
   display: block;
   padding-inline-start: 0;
-  height: 93.4%;
+  height: 90vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .sidebar ul li {
   padding:0;
@@ -79,21 +82,20 @@ nav ul li a:hover{
   left:0px;
   line-height:40px;
   width: 100%;
-  height: 5%;
+  height: fit-content;
   text-align: center;
   transition: all linear 0.4s; 
-  margin-bottom: 12%;
+  /* margin-bottom: 12%; */
   
 }
 .sidebar ul li a{
-  height: 100%;
+  height: fit-content;
   width: 100%;
   cursor:pointer;
   color: white;
   font-size: 15px;
   font-family: 'Oswald', sans-serif;
   border-bottom: 1.5px solid white;
-  padding-bottom: 23%;
 }
 .sidebar ul li:hover{
   cursor: default;
@@ -205,16 +207,20 @@ nav ul li a:hover{
   height: 70%;
 }
 .info p{
-  margin-left: 5%;
+  /* margin-left: 5%; */
   font-size: 130%;
-  margin-right: 15%;
+  /* margin-right: 15%; */
   font-family: 'Nunito Sans', sans-serif;
   color: #ddd9d9;
   text-align: center;
   border-bottom: 1px solid #fff;
+  width: 80%;
+  margin: auto;
 }
 .info h2{
-  margin-left: 35%;
+  /* margin-left: 35%; */
+  margin: auto;
+  width: fit-content;
   margin-top: 25%;
   margin-bottom: 5%;
   font-family: 'Chivo', sans-serif;
@@ -224,31 +230,41 @@ nav ul li a:hover{
   display: block;
   align-items: center;
   width:  98.7vw;
-  height: 80vh;
+  height: fit-content;
+  /* position: absolute; */
   background-color:#000c19;
   box-shadow: inset 0 0 1em 0 #003d80,0 0 1em 0 #003d80;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* position: absolute; */
 }
 .Coordinators h2 {
-  margin-left: 40%;
-  padding-top: 2%;
+  /* margin-left: 40%; */
+  padding-top: 20px;
+  width: fit-content;
+  margin: auto;
   font-weight: bold;
   font-family: 'Chivo', sans-serif;
-  font-size: 3rem;
+  font-size: 30px;
   /*text-shadow: 0 0 0.125em hsl(0 0% 100%/0.5), 0 0 0.45em #fff;*/
   color: #fff;
 }
 .coord-info{
-  width: 19.5%;
-  height:40% ;
-  margin-left: 43%;
-  margin-top: 3%;
+  width: 90%;
+  height: fit-content ;
+  /* margin-left: 43%; */
+  /* margin-top: 3%; */
+  margin: auto;
+  /* padding: 10%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 7%;
   box-sizing: border-box;
   box-shadow: 0 20px 35px rgb(0,0,0,0.3);
-  position: relative;
-  overflow: hidden;
-  transition: .5s linear;
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* transition: .5s linear; */
 }
 .onclick{
   animation: slide .6s linear;
@@ -289,22 +305,27 @@ nav ul li a:hover{
   }
 }
 .content{
-  position: absolute;
+  /* position: absolute; */
   inset: 1.5%;
+  width: 250px;
   background-color:#021631;
   border-radius: 5%;
+  padding: 5%;
+  margin: 10%;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .content img {
-  width: 35%;
-  height: 45%;
-  margin-left: 33%;
+  width: 150px;
+  height: 200px;
+  /* margin-left: 33%; */
+  margin: auto;
   margin-top: 8%;
   border-radius: 50%;
   transition: 0.5s linear;
 }
-.content button{
+/* .content button{
   margin-left: 26%;
   border: 0;
   border-bottom:outset 3px #27b7f6;
@@ -315,11 +336,11 @@ nav ul li a:hover{
   box-shadow:none;
   font-family:'Chivo', sans-serif;
   font-weight: 200;
-}
-.content button:hover{
+} */
+/* .content button:hover{
   background-color: #1E90FF;
   border-bottom:outset 3px #1E90FF;
-}
+} */
 #button2{
   display: none;
 }
@@ -333,7 +354,7 @@ nav ul li a:hover{
   font-family: 'Montserrat', sans-serif;
   /*text-shadow: 0 0 0.125em hsl(0 0% 100%/0.5), 0 0 0.45em #fff;*/
 }
-.coord-info::before{
+/* .coord-info::before{
   content: '';
   position: absolute;
   box-sizing: border-box;
@@ -352,7 +373,7 @@ nav ul li a:hover{
     #fd004c
   );
   animation: spin 1.5s infinite linear;
-}
+} */
 
 @keyframes spin{
   100%{
@@ -360,9 +381,9 @@ nav ul li a:hover{
   }
   
 }
-.coord-info::before:hover{
+/* .coord-info::before:hover{
   margin-top: 90%;
-}
+} */
 .scroll-container{
   margin-left: 45%;
   margin-top: 11%;
@@ -387,15 +408,17 @@ nav ul li a:hover{
 }
 
 #coord-links{
-  margin-left:0%;
-  margin-top: 30%;
-  margin-right: 20%;
+  /* margin-left:0%; */
+  margin-top: 20%;
+  /* margin-right: 20%; */
   height: 10%;
   width:100%;
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #coord-links i{
-  margin-left: 15%;
+  /* margin: 15%; */
   color: white;
   font-size: 30px;
 }
@@ -568,7 +591,7 @@ nav ul li a:hover{
   }
   .info p{
     font-size: 1rem;
-    margin-left: 38%;
+    /* margin-left: 38%; */
   }
   .info h2{
     font-size: 1.5rem;
@@ -587,7 +610,7 @@ nav ul li a:hover{
   }
   .about p{
     font-size: 0.8rem;
-    margin-left: 30%;
+    /* margin-left: 30%; */
   }
   .info h2{
     font-size: 1.2rem;
@@ -615,15 +638,11 @@ nav ul li a:hover{
     padding: 0;
     font-size: 12px;
   }
-  .info h2{
-    margin-left: 52%;
-    margin-right: -15%;
-  }
   .phone-pic {
     display: none;
   }
   .info p{
-    margin-right: -50%;
+    /* margin-right: -50%; */
     font-size: 15px;
   }
   .Coordinators h2{
@@ -685,9 +704,9 @@ nav ul li a:hover{
   }
 
   .info p {
-    margin-left:15%;
+    /* margin-left:15%; */
     font-size: 18px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
   }
 
   .about .phone-pic {
@@ -712,9 +731,6 @@ nav ul li a:hover{
     margin-right: 10px;
   }
 
-  .sidebar ul {
-    margin-top: 60px;
-  }
 
   #check:checked ~ .sidebar {
     width: 100%;
@@ -734,11 +750,6 @@ nav ul li a:hover{
     width: 100%;
   }
 
-  #coord-links {
-    margin-left: 20px;
-    margin-right: 20px;
-    height: auto;
-  }
 
   .scroll-container {
     display: flex;
