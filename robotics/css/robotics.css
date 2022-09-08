@@ -52,7 +52,7 @@ html {
   /* height: 70px; */
   min-width: 100%;
   /* word-wrap: none; */
-  justify-content: center;
+  justify-content: start;
   /* margin: auto 5pxnam; */
   align-items: center;
   /* width: 100px; */
@@ -65,13 +65,13 @@ html {
 }
 
 .logotext {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   /* margin-top: 0px; */
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 10px;
-  min-width: 100%;
+  min-width: fit-content;
 }
 
 .wrapper {
@@ -91,6 +91,7 @@ html {
   /* flex-wrap: wrap; */
   /* justify-content: center; */
   align-items: center;
+  padding: 0;
   height: fit-content;
 }
 
@@ -222,6 +223,7 @@ html {
   .navlinks {
     flex-direction: column;
     display: none;
+    transition: 1800ms ease-in-out;
   }
   /* .navli {
     margin: 5px auto 5px 15px;
@@ -343,7 +345,7 @@ html {
 .cord-h {
   color: #fff;
   font-weight: 700;
-  font-size: 250%;
+  font-size: 25px;
   padding-top: 120px;
   display: flex;
   justify-content: center;
@@ -487,23 +489,24 @@ footer {
 }
 .club-links {
   padding: 4%;
-  height: 250px;
+  height: fit-content;
 }
 
 .club-links ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 .club-links li {
   font-size: 20px;
   font-weight: 400;
   margin-top: 3%;
   margin-bottom: 3%;
+  margin: 20px;
   color: #fff;
 }
 .otherclubs {
@@ -521,7 +524,7 @@ footer {
   -webkit-box-shadow: 8px 8px 14px aqua;
 
   box-shadow: 8px 8px 14px aqua;
-  height: 250px;
+  height: fit-content;
 }
 .club-links a {
   color: #80788b;
