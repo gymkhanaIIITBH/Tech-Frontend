@@ -1,3 +1,7 @@
+:root{
+  --bodyHeight:100%;
+}
+
 
 ::-webkit-scrollbar{
   width: 10px;
@@ -8,19 +12,33 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(49, 18, 50);
+  background: rgb(255, 255, 255);
   border-radius: 10px;
 }
 
 body {
-  background-image: url("../data/maxresdefault.jpg");
+  /* background-image: url("../data/maxresdefault.jpg"); */
   margin: 0;
   background-size: cover;
   background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.899) !important;
+  /* position: absolute; */
 }
-.active-bg {
+
+body::before{
+  content: "";
+  background-image: url("../data/maxresdefault.jpg");
+  width: 100%;
+  height: var(--bodyHeight);
+  opacity: .15;
+  position: absolute;
+  color: white;
+  z-index: -10;
+}
+
+/* .active-bg {
   background-image: url("../data/3600167.jpg");
-}
+} */
 .navbar {
   position: fixed !important;
   width: 100%;
@@ -32,16 +50,42 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 70% auto;
+  height: 100vh;
+  /* margin-top: 56px; */
 }
+
+.home-heading-text{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .home-text {
-  margin-bottom: 15%;
-  margin-left: 5%;
-  padding-top: 15%;
+  color: white;
 }
+
+.home-text h2{
+  font-size: 30px;
+}
+
+.home-text h1{
+  text-shadow: 2px 2px #928f8f;
+  font-size: 40px;
+}
+
+.home-text h3{
+  font-size: 20px;
+  font-weight: normal;
+}
+
 .container {
   color: #fff;
 }
 .home-social-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 4% 2%;
   list-style: none;
@@ -49,11 +93,11 @@ body {
   line-height: 1.75;
   text-align: center;
 }
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .home-text {
     padding-top: 40%;
   }
-}
+} */
 .home-social-list::before {
   display: block;
   content: "";
@@ -72,14 +116,19 @@ body {
   background-color: rgba(255, 255, 255, 0.753);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 12px;
+  margin-top: 12px;
 }
 .home-social-list li {
   padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
 }
 .home-social-list li a,
 .home-social-list li a:visited {
   color: #ffffff;
+  font-size: 26px;
 }
 .home-social-list li a:hover,
 .home-social-list li a:focus,
@@ -349,11 +398,14 @@ p a:hover {
   margin: 3%;
 }
 .gs-img {
-  width: 70%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 150px;
 }
 .gs-img img {
   width: 100%;
-  height: 30vh;
+  height: 100%;
   border-radius: 50%;
 }
 .gs-desc {

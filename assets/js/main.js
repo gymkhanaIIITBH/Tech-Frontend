@@ -1,5 +1,27 @@
 const url = `https://clubiiitbh.herokuapp.com/api/news/getdata`;
 
+const body = document.body;
+const html = document.documentElement;
+
+const height = Math.max(body.scrollHeight, body.offsetHeight,
+  html.clientHeight, html.scrollHeight, html.offsetHeight);
+console.log(height)
+// console.log()
+document.documentElement.style.setProperty('--bodyHeight', `${height - 1000}px`)
+
+
+const hover = document.getElementById('navHOVER')
+function hoverNav() {
+  // console.log(hover[0].firstChild.classList);
+  // for(var i=0;i<hover.length;i++)
+  hover.classList = "dropdown-menu dropdown-menu-dark show"
+}
+
+function hoverLeave() {
+  hover.classList = "dropdown-menu dropdown-menu-dark"
+}
+
+
 var remainNews = document.querySelector(".remain-news");
 var carouselItemActive = document.querySelector(".carousel-item.active");
 var carouselItemActiveTitle = document.querySelector(

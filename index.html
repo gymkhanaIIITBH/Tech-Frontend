@@ -34,16 +34,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
           <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#" style="font-weight: 500">
+            <a class="nav-link active" aria-current="page" href="#" style="font-weight: 500;  border-bottom: 2px solid black;" onmouseover="this.style.borderBottom='2px solid blue'" onmouseout="this.style.borderBottom='2px solid black'">
               Home
             </a>
           </li>
           <li class="nav-item dropdown mx-2">
-            <a class="nav-link active" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" style="font-weight: 500">
+            <a class="nav-link active" href="#" id="navbarDarkDropdownMenuLink" onmousemove="hoverNav()" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="font-weight: 500;  border-bottom: 2px solid black;" onmouseover="this.style.borderBottom='2px solid blue'" onmouseout="this.style.borderBottom='2px solid black'">
               Club
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <ul class="dropdown-menu dropdown-menu-dark" id="navHOVER" onmouseleave="hoverLeave()" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="https://clubiiitbh.herokuapp.com/coding">PyC</a></li>
               <li><a class="dropdown-item" href="./webverse/web.html">WebVerse</a></li>
               <li><a class="dropdown-item" href="./ai/ai.html">AI/ML</a></li>
@@ -63,17 +63,17 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item mx-2" style="font-weight: 500">
+          <!-- <li class="nav-item mx-2" style="font-weight: 500">
             <a class="nav-link active" href="#">About Us</a>
-          </li>
-          <li class="nav-item mx-2" style="font-weight: 500">
+          </li> -->
+          <li class="nav-item mx-2" style="font-weight: 500; border-bottom: 2px solid black;" onmouseover="this.style.borderBottom='2px solid blue'" onmouseout="this.style.borderBottom='2px solid black'">
             <a class="nav-link active" href="./certificate/certificate.html">Verify Certificates</a>
           </li>
 
         </ul>
         <ul class="navbar-nav ml-4 mb-2 mb-lg-0 ">
           <div class="btn-group">
-            <button type="button" onclick="window.location.href='./admin-portal/admin.html';" class="btn btn-primary"
+            <button type="button" style="background-color: black; font-weight: 500;" onmouseover="this.style.backgroundColor='blue'" onmouseout="this.style.backgroundColor='black'"  onclick="window.location.href='./admin-portal/admin.html';" class="btn btn-primary"
               aria-expanded="false">
               Admin
             </button>
@@ -95,7 +95,7 @@
             class="fa-brands fa-linkedin"></i></a>
       </li>
     </ul>
-    <div class="container d-flex">
+    <div class="container d-flex home-heading-text">
       <div class="home-text">
         <h3> Welcome to</h3>
         <h1 style="font-weight: 700;"> Technical Board</h1>
@@ -352,7 +352,7 @@
       </div>
       <div class="gs-tech">
         <div class="gs-img">
-          <img src="./assets/data/tech-coord.jpg" alt="tc-img">
+          <img src="./assets/data/tech-coord.jpg" alt="tc-img" width="100%" height="100%">
         </div>
         <div class="gs-desc">
           <span style="font-weight: 900; font-size: 24px;">
@@ -367,7 +367,7 @@
       </div>
       <div class="gs-tech">
         <div class="gs-img">
-          <img src="./assets/data/gs-tech.jpg" alt="gs-img">
+          <img src="./assets/data/gs-tech.jpg" alt="gs-img" width="100%" height="100%">
         </div>
         <div class="gs-desc">
           <span style="font-weight: 900; font-size: 24px;">
