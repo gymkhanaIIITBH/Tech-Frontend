@@ -1,3 +1,5 @@
+const url = `https://clubiiitbh.herokuapp.com`;
+
 /* eslint-disable no-undef */
 setTimeout(() => {
   window.scrollTo(0, 8);
@@ -100,3 +102,75 @@ ScrollReveal().reveal('.mainheader, .phead, .otherclubs', {delay: 600, distance:
 ScrollReveal().reveal('.details, .box, .club-links', {delay: 400, duration: 3000})
 ScrollReveal().reveal('.cod1', {distance: '50px', origin: 'left'})
 ScrollReveal().reveal('.cod2', {distance: '50px', origin: 'right'})
+
+
+
+// Coordinator Detail Fetch Method
+
+var coord = document.getElementById('coordinator');
+
+const fetchCoordinator = () => {
+  fetch(`${url}/api/club/web`)
+    .then((res) => res.json())
+    .then((res) => {
+     
+      if (res.status === 0) {
+       
+        UpdateCoordinator(res.data);
+      }
+    })
+    .catch()
+}
+
+fetchCoordinator();
+
+
+const UpdateCoordinator = (data) => {
+  var html = ``;
+  for (i in data) {
+    var img = arrayBufferToBase64(data[i]['image'].data.data);
+    var imgSrc = `data:image/${data[i].image.contentType};base64,${img.toString('base64')}`;
+
+    html += `
+    <div class="coordinator cod1">
+    <div class="imagecontainer">
+        <img src="${imgSrc}" class="cimage"></img>
+    </div>
+    <div class="contents_co">
+        <div class="details_co">
+            <h2>${data[i]['fname']} ${data[i]['lname']}<br> <span>Coordinator</span> </h2>
+            <div class="connect">
+                <ul>
+                    <li>
+                        <a href="${data[i]['linkedIn']}">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="${data[i]['instagram']}">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="${data[i]['github']}">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    `
+  }
+
+  coord.innerHTML = html;
+}
+
+// buffer to binary convert
+const arrayBufferToBase64 = (buffer) => {
+  var binary = '';
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => binary += String.fromCharCode(b));
+  return window.btoa(binary);
+};
