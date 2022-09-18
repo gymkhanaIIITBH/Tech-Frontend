@@ -219,20 +219,23 @@ html {
   transition: all 1s;
 }
 
-.hidden2 {
+.hidden2,.hidden3 {
   opacity: 0;
   transform: translateX(-100vw);
   filter: blur(20px);
   transition: all 2s;
   transition-delay: 0;
 }
-.hidden2:nth-child(2) {
+.hidden3 {
+  width:110%;
+}
+.hidden2:nth-child(2),.hidden3:nth-child(2) {
   transition-delay: 500ms;
 }
-.hidden2:nth-child(3) {
+.hidden2:nth-child(3),.hidden3:nth-child(3) {
   transition-delay: 1000ms;
 }
-.hidden2:nth-child(4) {
+.hidden2:nth-child(4),.hidden3:nth-child(4) {
   transition-delay: 1500ms;
 }
 
@@ -414,6 +417,25 @@ html {
 
 
 @media only screen and (max-width: 900px) {
+  * {
+    font-size: 15px;
+  }
+
+  .about h1 {
+    font-size: 30px;
+  }
+
+  .about .motto {
+    font-size: 20px;
+  }
+
+  .quote h1 {
+    font-size: 30px;
+  }
+
+  .quote div {
+    font-size: 20px;
+  }
   .navbar .sbtn {
     display: block;
   }
