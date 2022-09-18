@@ -1,500 +1,120 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image" href="../assets/data/ai-logo.png">
-    <title>AI/ML Club</title>
-    <!-- Import fade effect -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <!--used swiperjs framework-->
-    <link rel="stylesheet" href="./css/ai.css">
-    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <!-- Import JS -->
-</head>
-
-<body>
-    <section class="loader">
-        <div class="intro_container_banner">
-            <div class="word1">
-                <svg id="logo1" width="659" height="112" viewBox="0 0 659 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_2_5)">
-                    <mask id="path-1-outside-1_2_5" maskUnits="userSpaceOnUse" x="4" y="0" width="651" height="104" fill="black">
-                    <rect fill="white" x="4" width="651" height="104"/>
-                    <path d="M138.888 7.28671L113.64 97.0993H92.2761L75.3145 33.1497L57.5761 97.0993L36.3418 97.228L12 7.28671H31.4216L47.3474 77.0266L65.7332 7.28671H85.9317L103.282 76.6406L119.337 7.28671H138.888Z"/>
-                    <path d="M168.851 21.8266V44.3441H199.278V58.6266H168.851V82.4308H203.162V97.0993H150.724V7.15803H203.162V21.8266H168.851Z"/>
-                    <path d="M237.762 82.8168H267.542V97.0993H219.635V7.28671H237.762V82.8168Z"/>
-                    <path d="M274.661 52.0643C274.661 43.2289 276.647 35.3371 280.617 28.3888C284.674 21.3548 290.155 15.9077 297.061 12.0476C304.053 8.10163 311.865 6.12867 320.496 6.12867C330.596 6.12867 339.443 8.7021 347.039 13.849C354.635 18.9958 359.944 26.1156 362.965 35.2084H342.119C340.047 30.9193 337.113 27.7026 333.315 25.558C329.603 23.4135 325.287 22.3413 320.367 22.3413C315.101 22.3413 310.397 23.5851 306.254 26.0727C302.197 28.4746 299.003 31.9058 296.672 36.3664C294.428 40.827 293.306 46.0597 293.306 52.0643C293.306 57.9832 294.428 63.2159 296.672 67.7622C299.003 72.2228 302.197 75.697 306.254 78.1846C310.397 80.5865 315.101 81.7874 320.367 81.7874C325.287 81.7874 329.603 80.7152 333.315 78.5706C337.113 76.3403 340.047 73.0807 342.119 68.7916H362.965C359.944 77.9702 354.635 85.1329 347.039 90.2797C339.53 95.3408 330.682 97.8713 320.496 97.8713C311.865 97.8713 304.053 95.9413 297.061 92.0811C290.155 88.1352 284.674 82.6881 280.617 75.7399C276.647 68.7916 274.661 60.8998 274.661 52.0643Z"/>
-                    <path d="M420.398 98C411.939 98 404.171 96.027 397.092 92.0811C390.014 88.1352 384.404 82.6881 380.26 75.7399C376.117 68.7058 374.045 60.7711 374.045 51.9357C374.045 43.186 376.117 35.3371 380.26 28.3888C384.404 21.3548 390.014 15.8648 397.092 11.9189C404.171 7.97296 411.939 6 420.398 6C428.944 6 436.713 7.97296 443.704 11.9189C450.782 15.8648 456.35 21.3548 460.407 28.3888C464.55 35.3371 466.622 43.186 466.622 51.9357C466.622 60.7711 464.55 68.7058 460.407 75.7399C456.35 82.6881 450.782 88.1352 443.704 92.0811C436.626 96.027 428.858 98 420.398 98ZM420.398 81.9161C425.836 81.9161 430.627 80.7152 434.77 78.3133C438.914 75.8256 442.151 72.3086 444.481 67.7622C446.812 63.2159 447.977 57.9403 447.977 51.9357C447.977 45.931 446.812 40.6984 444.481 36.2378C442.151 31.6914 438.914 28.2172 434.77 25.8154C430.627 23.4135 425.836 22.2126 420.398 22.2126C414.96 22.2126 410.126 23.4135 405.897 25.8154C401.754 28.2172 398.517 31.6914 396.186 36.2378C393.855 40.6984 392.69 45.931 392.69 51.9357C392.69 57.9403 393.855 63.2159 396.186 67.7622C398.517 72.3086 401.754 75.8256 405.897 78.3133C410.126 80.7152 414.96 81.9161 420.398 81.9161Z"/>
-                    <path d="M578.64 7.28671V97.0993H560.513V38.6825L536.301 97.0993H522.576L498.235 38.6825V97.0993H480.108V7.28671H500.695L529.439 74.0671L558.183 7.28671H578.64Z"/>
-                    <path d="M614.688 21.8266V44.3441H645.116V58.6266H614.688V82.4308H649V97.0993H596.562V7.15803H649V21.8266H614.688Z"/>
-                    </mask>
-                    <path id="let1" d="M138.888 7.28671L113.64 97.0993H92.2761L75.3145 33.1497L57.5761 97.0993L36.3418 97.228L12 7.28671H31.4216L47.3474 77.0266L65.7332 7.28671H85.9317L103.282 76.6406L119.337 7.28671H138.888Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path  id="let2" d="M168.851 21.8266V44.3441H199.278V58.6266H168.851V82.4308H203.162V97.0993H150.724V7.15803H203.162V21.8266H168.851Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path  id="let3" d="M237.762 82.8168H267.542V97.0993H219.635V7.28671H237.762V82.8168Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path  id="let4" d="M274.661 52.0643C274.661 43.2289 276.647 35.3371 280.617 28.3888C284.674 21.3548 290.155 15.9077 297.061 12.0476C304.053 8.10163 311.865 6.12867 320.496 6.12867C330.596 6.12867 339.443 8.7021 347.039 13.849C354.635 18.9958 359.944 26.1156 362.965 35.2084H342.119C340.047 30.9193 337.113 27.7026 333.315 25.558C329.603 23.4135 325.287 22.3413 320.367 22.3413C315.101 22.3413 310.397 23.5851 306.254 26.0727C302.197 28.4746 299.003 31.9058 296.672 36.3664C294.428 40.827 293.306 46.0597 293.306 52.0643C293.306 57.9832 294.428 63.2159 296.672 67.7622C299.003 72.2228 302.197 75.697 306.254 78.1846C310.397 80.5865 315.101 81.7874 320.367 81.7874C325.287 81.7874 329.603 80.7152 333.315 78.5706C337.113 76.3403 340.047 73.0807 342.119 68.7916H362.965C359.944 77.9702 354.635 85.1329 347.039 90.2797C339.53 95.3408 330.682 97.8713 320.496 97.8713C311.865 97.8713 304.053 95.9413 297.061 92.0811C290.155 88.1352 284.674 82.6881 280.617 75.7399C276.647 68.7916 274.661 60.8998 274.661 52.0643Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path  id="let5" d="M420.398 98C411.939 98 404.171 96.027 397.092 92.0811C390.014 88.1352 384.404 82.6881 380.26 75.7399C376.117 68.7058 374.045 60.7711 374.045 51.9357C374.045 43.186 376.117 35.3371 380.26 28.3888C384.404 21.3548 390.014 15.8648 397.092 11.9189C404.171 7.97296 411.939 6 420.398 6C428.944 6 436.713 7.97296 443.704 11.9189C450.782 15.8648 456.35 21.3548 460.407 28.3888C464.55 35.3371 466.622 43.186 466.622 51.9357C466.622 60.7711 464.55 68.7058 460.407 75.7399C456.35 82.6881 450.782 88.1352 443.704 92.0811C436.626 96.027 428.858 98 420.398 98ZM420.398 81.9161C425.836 81.9161 430.627 80.7152 434.77 78.3133C438.914 75.8256 442.151 72.3086 444.481 67.7622C446.812 63.2159 447.977 57.9403 447.977 51.9357C447.977 45.931 446.812 40.6984 444.481 36.2378C442.151 31.6914 438.914 28.2172 434.77 25.8154C430.627 23.4135 425.836 22.2126 420.398 22.2126C414.96 22.2126 410.126 23.4135 405.897 25.8154C401.754 28.2172 398.517 31.6914 396.186 36.2378C393.855 40.6984 392.69 45.931 392.69 51.9357C392.69 57.9403 393.855 63.2159 396.186 67.7622C398.517 72.3086 401.754 75.8256 405.897 78.3133C410.126 80.7152 414.96 81.9161 420.398 81.9161Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path id="let6" d="M578.64 7.28671V97.0993H560.513V38.6825L536.301 97.0993H522.576L498.235 38.6825V97.0993H480.108V7.28671H500.695L529.439 74.0671L558.183 7.28671H578.64Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    <path id="let7" d="M614.688 21.8266V44.3441H645.116V58.6266H614.688V82.4308H649V97.0993H596.562V7.15803H649V21.8266H614.688Z" stroke="white" stroke-width="12" shape-rendering="crispEdges" mask="url(#path-1-outside-1_2_5)"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_d_2_5" x="0.160309" y="0" width="658.84" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.991667 0 0 0 0 0.991667 0 0 0 0.47 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_5"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_5" result="shape"/>
-                    </filter>
-                    </defs>
-                    </svg>                    
-            </div>
-            <div class="word2">
-                <svg id="logo2" width="186" height="112" viewBox="0 0 186 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_2_9)">
-                    <path id="let12" d="M78.632 11.656V8.65601H75.632H10.0959H7.09595V11.656V26.12V29.12H10.0959H30.9039V101V104H33.9039H51.8239H54.8239V101V29.12H75.632H78.632V26.12V11.656ZM87.9099 81.2675L87.914 81.2745L87.9181 81.2814C92.2827 88.6467 98.213 94.4406 105.671 98.6244C113.136 102.812 121.325 104.896 130.179 104.896C139.033 104.896 147.222 102.812 154.687 98.6244C162.149 94.4381 168.043 88.6379 172.324 81.2611C176.709 73.7673 178.875 65.3452 178.875 56.072C178.875 46.8838 176.709 38.5458 172.323 31.1371C168.046 23.6831 162.157 17.8397 154.693 13.6513C147.303 9.45602 139.11 7.37601 130.179 7.37601C121.325 7.37601 113.136 9.45991 105.671 13.6476C98.206 17.8354 92.2757 23.6767 87.9138 31.1258C83.5236 38.5373 81.3549 46.8792 81.3549 56.072C81.3549 65.3478 83.5224 73.7722 87.9099 81.2675ZM151.314 41.8178L151.319 41.8281L151.324 41.8384C153.367 45.7731 154.443 50.4868 154.443 56.072C154.443 61.6554 153.368 66.4219 151.314 70.4542C149.252 74.5024 146.433 77.5658 142.855 79.7325C139.281 81.8122 135.087 82.896 130.179 82.896C125.277 82.896 121.033 81.8147 117.363 79.7254C113.791 77.5591 110.976 74.498 108.916 70.4542C106.862 66.4219 105.787 61.6554 105.787 56.072C105.787 50.4868 106.862 45.7731 108.905 41.8384L108.911 41.8281L108.916 41.8178C110.976 37.7745 113.785 34.7646 117.343 32.6861C121.017 30.5893 125.268 29.504 130.179 29.504C135.096 29.504 139.297 30.5919 142.875 32.6793C146.439 34.7581 149.252 37.7701 151.314 41.8178Z" stroke="white" stroke-width="6" shape-rendering="crispEdges"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_d_2_9" x="0.0959473" y="0.376007" width="185.779" height="111.52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.51 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_9"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_9" result="shape"/>
-                    </filter>
-                    </defs>
-                    </svg>
-            </div>
-            <div class="word3">
-                <svg id="logo3" width="742" height="104" viewBox="0 0 742 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="path-1-outside-1_2_13" maskUnits="userSpaceOnUse" x="0.328003" y="0.504028" width="741" height="104" fill="black">
-                    <rect fill="white" x="0.328003" y="0.504028" width="741" height="104"/>
-                    <path d="M69.616 79.976H34.032L28.144 97H9.328L41.456 7.52802H62.32L94.448 97H75.504L69.616 79.976ZM64.752 65.64L51.824 28.264L38.896 65.64H64.752Z"/>
-                    <path d="M124.377 7.65603V97H106.457V7.65603H124.377Z"/>
-                    <path d="M196.61 43.752V58.856H142.338V43.752H196.61Z"/>
-                    <path d="M314.115 7.65603V97H296.195V38.888L272.259 97H258.691L234.627 38.888V97H216.707V7.65603H237.059L265.475 74.088L293.891 7.65603H314.115Z"/>
-                    <path d="M349.752 82.792H379.192V97H331.832V7.65603H349.752V82.792Z"/>
-                    <path d="M416.73 52.2C416.73 43.4107 418.693 35.56 422.618 28.648C426.629 21.6507 432.047 16.232 438.874 12.392C445.786 8.4667 453.509 6.50403 462.042 6.50403C472.026 6.50403 480.773 9.06403 488.282 14.184C495.791 19.304 501.039 26.3867 504.026 35.432H483.418C481.37 31.1654 478.469 27.9654 474.714 25.832C471.045 23.6987 466.778 22.632 461.914 22.632C456.709 22.632 452.058 23.8694 447.962 26.344C443.951 28.7334 440.794 32.1467 438.49 36.584C436.271 41.0214 435.162 46.2267 435.162 52.2C435.162 58.088 436.271 63.2934 438.49 67.816C440.794 72.2534 443.951 75.7094 447.962 78.184C452.058 80.5734 456.709 81.768 461.914 81.768C466.778 81.768 471.045 80.7014 474.714 78.568C478.469 76.3494 481.37 73.1067 483.418 68.84H504.026C501.039 77.9707 495.791 85.096 488.282 90.216C480.858 95.2507 472.111 97.768 462.042 97.768C453.509 97.768 445.786 95.848 438.874 92.008C432.047 88.0827 426.629 82.664 422.618 75.752C418.693 68.84 416.73 60.9894 416.73 52.2Z"/>
-                    <path d="M537.252 82.792H566.692V97H519.332V7.65603H537.252V82.792Z"/>
-                    <path d="M595.746 7.65603V62.952C595.746 69.0107 597.325 73.6614 600.482 76.904C603.639 80.0614 608.077 81.64 613.794 81.64C619.597 81.64 624.077 80.0614 627.234 76.904C630.391 73.6614 631.97 69.0107 631.97 62.952V7.65603H650.018V62.824C650.018 70.4187 648.354 76.8614 645.026 82.152C641.783 87.3574 637.389 91.2827 631.842 93.928C626.381 96.5734 620.279 97.896 613.538 97.896C606.882 97.896 600.823 96.5734 595.362 93.928C589.986 91.2827 585.719 87.3574 582.562 82.152C579.405 76.8614 577.826 70.4187 577.826 62.824V7.65603H595.746Z"/>
-                    <path d="M718.02 51.176C723.055 52.1147 727.193 54.632 730.436 58.728C733.679 62.824 735.3 67.5174 735.3 72.808C735.3 77.5867 734.105 81.8107 731.716 85.48C729.412 89.064 726.041 91.88 721.604 93.928C717.167 95.976 711.919 97 705.86 97H667.332V7.65603H704.196C710.255 7.65603 715.46 8.63736 719.812 10.6C724.249 12.5627 727.577 15.2934 729.796 18.792C732.1 22.2907 733.252 26.2587 733.252 30.696C733.252 35.9014 731.844 40.2534 729.028 43.752C726.297 47.2507 722.628 49.7254 718.02 51.176ZM685.252 44.52H701.636C705.903 44.52 709.188 43.5814 711.492 41.704C713.796 39.7414 714.948 36.968 714.948 33.384C714.948 29.8 713.796 27.0267 711.492 25.064C709.188 23.1014 705.903 22.12 701.636 22.12H685.252V44.52ZM703.3 82.408C707.652 82.408 711.023 81.384 713.412 79.336C715.887 77.288 717.124 74.3867 717.124 70.632C717.124 66.792 715.844 63.8054 713.284 61.672C710.724 59.4534 707.268 58.344 702.916 58.344H685.252V82.408H703.3Z"/>
-                    </mask>
-                    <path id="let21" d="M69.616 79.976H34.032L28.144 97H9.328L41.456 7.52802H62.32L94.448 97H75.504L69.616 79.976ZM64.752 65.64L51.824 28.264L38.896 65.64H64.752Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let22" d="M124.377 7.65603V97H106.457V7.65603H124.377Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let23" d="M196.61 43.752V58.856H142.338V43.752H196.61Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let24" d="M314.115 7.65603V97H296.195V38.888L272.259 97H258.691L234.627 38.888V97H216.707V7.65603H237.059L265.475 74.088L293.891 7.65603H314.115Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let25" d="M349.752 82.792H379.192V97H331.832V7.65603H349.752V82.792Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let26" d="M416.73 52.2C416.73 43.4107 418.693 35.56 422.618 28.648C426.629 21.6507 432.047 16.232 438.874 12.392C445.786 8.4667 453.509 6.50403 462.042 6.50403C472.026 6.50403 480.773 9.06403 488.282 14.184C495.791 19.304 501.039 26.3867 504.026 35.432H483.418C481.37 31.1654 478.469 27.9654 474.714 25.832C471.045 23.6987 466.778 22.632 461.914 22.632C456.709 22.632 452.058 23.8694 447.962 26.344C443.951 28.7334 440.794 32.1467 438.49 36.584C436.271 41.0214 435.162 46.2267 435.162 52.2C435.162 58.088 436.271 63.2934 438.49 67.816C440.794 72.2534 443.951 75.7094 447.962 78.184C452.058 80.5734 456.709 81.768 461.914 81.768C466.778 81.768 471.045 80.7014 474.714 78.568C478.469 76.3494 481.37 73.1067 483.418 68.84H504.026C501.039 77.9707 495.791 85.096 488.282 90.216C480.858 95.2507 472.111 97.768 462.042 97.768C453.509 97.768 445.786 95.848 438.874 92.008C432.047 88.0827 426.629 82.664 422.618 75.752C418.693 68.84 416.73 60.9894 416.73 52.2Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let27" d="M537.252 82.792H566.692V97H519.332V7.65603H537.252V82.792Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let28" d="M595.746 7.65603V62.952C595.746 69.0107 597.325 73.6614 600.482 76.904C603.639 80.0614 608.077 81.64 613.794 81.64C619.597 81.64 624.077 80.0614 627.234 76.904C630.391 73.6614 631.97 69.0107 631.97 62.952V7.65603H650.018V62.824C650.018 70.4187 648.354 76.8614 645.026 82.152C641.783 87.3574 637.389 91.2827 631.842 93.928C626.381 96.5734 620.279 97.896 613.538 97.896C606.882 97.896 600.823 96.5734 595.362 93.928C589.986 91.2827 585.719 87.3574 582.562 82.152C579.405 76.8614 577.826 70.4187 577.826 62.824V7.65603H595.746Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    <path id="let29" d="M718.02 51.176C723.055 52.1147 727.193 54.632 730.436 58.728C733.679 62.824 735.3 67.5174 735.3 72.808C735.3 77.5867 734.105 81.8107 731.716 85.48C729.412 89.064 726.041 91.88 721.604 93.928C717.167 95.976 711.919 97 705.86 97H667.332V7.65603H704.196C710.255 7.65603 715.46 8.63736 719.812 10.6C724.249 12.5627 727.577 15.2934 729.796 18.792C732.1 22.2907 733.252 26.2587 733.252 30.696C733.252 35.9014 731.844 40.2534 729.028 43.752C726.297 47.2507 722.628 49.7254 718.02 51.176ZM685.252 44.52H701.636C705.903 44.52 709.188 43.5814 711.492 41.704C713.796 39.7414 714.948 36.968 714.948 33.384C714.948 29.8 713.796 27.0267 711.492 25.064C709.188 23.1014 705.903 22.12 701.636 22.12H685.252V44.52ZM703.3 82.408C707.652 82.408 711.023 81.384 713.412 79.336C715.887 77.288 717.124 74.3867 717.124 70.632C717.124 66.792 715.844 63.8054 713.284 61.672C710.724 59.4534 707.268 58.344 702.916 58.344H685.252V82.408H703.3Z" stroke="white" stroke-width="12" mask="url(#path-1-outside-1_2_13)"/>
-                    </svg>
-            </div>
-            <div class="word4">
-                <svg id="logo4" width="442" height="113" viewBox="0 0 442 113" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="let31" d="M338.303 94.8728L338.295 94.8863C335.359 99.4538 331.108 103.013 325.695 105.616L325.684 105.621L325.673 105.626C320.292 108.158 314.029 109.368 306.971 109.368H269.531H266.531V106.368V6V3H269.531H305.531C312.665 3 318.934 4.20298 324.231 6.74063C329.461 9.15083 333.544 12.5296 336.299 16.938C339.015 21.2838 340.355 26.161 340.355 31.488C340.355 38.0166 338.551 43.6709 334.772 48.2305M338.303 94.8728L332.459 46.32M338.303 94.8728L338.312 94.8593C341.218 90.2318 342.659 85.0664 342.659 79.44C342.659 74.9469 341.641 70.6942 339.607 66.722L338.303 94.8728ZM334.772 48.2305C334.771 48.232 334.77 48.2335 334.768 48.235L332.459 46.32M334.772 48.2305C334.773 48.23 334.773 48.2296 334.773 48.2291L332.459 46.32M334.772 48.2305C332.8 50.6203 330.476 52.6301 327.821 54.2681M332.459 46.32C330.277 48.9656 327.593 51.1099 324.408 52.753C325.582 53.1653 326.72 53.6707 327.821 54.2681M327.821 54.2681C329.13 54.9783 330.386 55.8184 331.588 56.7862M327.821 54.2681C326.781 54.9095 325.691 55.4938 324.551 56.0216C326.375 56.7881 328.099 57.8263 329.723 59.136M331.588 56.7862C331.594 56.791 331.6 56.7959 331.606 56.8008L329.723 59.136M331.588 56.7862C331.582 56.7815 331.576 56.7766 331.57 56.7719L329.723 59.136M331.588 56.7862L329.723 59.136M22.104 6V3H19.104H6H3V6V106.368V109.368H6H19.104H22.104V106.368V6ZM57.5415 6V3H54.5415H41.4375H38.4375V6V106.368V109.368H41.4375H54.5415H57.5415V106.368V6ZM92.979 6V3H89.979H76.875H73.875V6V106.368V109.368H76.875H89.979H92.979V106.368V6ZM177.089 6V3H174.089H106.12H103.12V6V16.656V19.656H106.12H130.624V106.368V109.368H133.624H146.729H149.729V106.368V19.656H174.089H177.089V16.656V6ZM247.939 48.048V45.048H244.939H187.483H184.483V48.048V59.136V62.136H187.483H244.939H247.939V59.136V48.048ZM318.852 67.3258L318.869 67.3401L318.886 67.3541C321.948 69.8801 323.555 73.3517 323.555 78.144C323.555 82.8767 322.018 86.2509 319.151 88.6653C316.214 91.1383 311.9 92.568 305.819 92.568H285.635V63.144H305.387C311.309 63.144 315.691 64.6384 318.852 67.3258ZM438.172 6V3H435.172H422.068H419.068V6V47.064H373.948V6V3H370.948H357.844H354.844V6V106.368V109.368H357.844H370.948H373.948V106.368V63.864H419.068V106.368V109.368H422.068H435.172H438.172V106.368V6ZM304.667 46.344H285.635V19.8H304.379C310.303 19.8 314.348 21.1496 316.971 23.3978C319.563 25.6193 320.963 28.7139 320.963 33.072C320.963 37.4301 319.563 40.5247 316.971 42.7462C314.333 45.0071 310.372 46.344 304.667 46.344Z" stroke="#FFFBFB" stroke-width="6"/>
-                    </svg>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI ML</title>
+    <script src="./js/particles.js"></script>
+    <script src="../assets/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="./css/ai.css" />
+    <!-- material symbol outlined -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+  </head>
+  <body>
+    
+    <div id="particles-js"></div>
+    <div class="navbar">
+      <img class="logo" src="../assets/data/ai-logo.png" />
+      <div class="buttons">
+        <div class="button">Home</div>
+        <div class="button">About</div>
+        <div class="button">Resource</div>
+        <div class="admin">Admin</div>
+      </div>
+      <div class="sbtn" onclick="sidebaropen()">
+        <i class="material-icons-outlined" style="font-size: 50px">menu</i>
+      </div>
+    </div>
+    <div id=sidebar class="sidebar">
+        <i class="material-icons-outlined close" style="font-size: 50px" onclick="sidebarclose()">close</i>
+        <div class="button hidden3">Home</div>
+        <div class="button hidden3">About</div>
+        <div class="button hidden3">Resource</div>
+        <div class="admin hidden3">Admin</div>
+    </div>
+    <div id="main" class="main">
+      <div class="banner hidden">
+        <img class="img " src="../assets/data/ai-banner.jpg" />
+      </div>
+      <div class="about hidden" >
+        <h1>About Us</h1>
+        <br>
+        <br>
+        <br>
+        <div class="motto">
+          "Predicting the future isn't magic it's ARTIFICIAL INTELLIGENCE".
+        </div>
+        <br />
+        <br />
+        <div class="desc">
+          AI-ML Club of IIIT Bhagalpur is for all futuristic ones.This club
+          promises to make system adaptive through artificial intelligence.We
+          organize webinars, debates, and various competition along with
+          hackathons to show up your skills and improve the abilities to
+          analyze, and develop computational intelligence. Our main goal is to
+          administer you with the industrial challenges for your better future.
+          This club gives everyone equal opprtunity to show up skills of
+          analyzing problems.
+        </div>
+      </div>
+      <div class="quote hidden">
+        <h1>Quote</h1>
+        <i class="hidden2" style="--i : 0">SIMULATION</i>
+        <i class="hidden2" style="--i : 1000ms">OF</i>
+        <i class="hidden2" style="--i : 2000ms">HUMAN</i>
+        <i class="hidden2" style="--i : 3000ms">INTELLIGENCE</i>
+        <i class="hidden2" style="--i : 3500ms">ON MACHINE</i>
+      </div>
+      <div class="coord hidden" >
+        <h1>Club Coordinator</h1>
+        <div class="card">
+            <img src="../assets/data/ai-mlcoordinator.jfif" alt="" class="faccordimg">
+            <br>
+            <h2 class="techcordabt1">AYUSH SINHA</h2>
+            <h3 class="techcordabt2">AI-ML Coordinator</h2>
+            <h4 class="techcordabt3">Indian Institute Of Information Technology,Bhagalpur</h2>
+            <div class="smedia">
+                <a href="" class="gmail_logo"><i class="fa fa-envelope"></i></a>
+                <a href="" class="git_logo"><i class="fa fa-github"></i></a>
+                <a href="" class="linkedin_logo"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
-        <div class="logo_banner_intro">
-            <img src="../assets/data/ai-logo.png" alt="" class="imglogointro">
-        </div>
-    </section>
-    
-    
-    
-    
-    
-    <section class="main">
-        <a name="home" id="home"></a>
-        <div class="heroSection" id="heroSectionId">
-            <div class="herocontent ">
-                <div class="logo">
-                    <img src="../assets/data/ai-logo.png" alt="Server Error" height="100%" width="100%" class="ai-ml">
-                    <h3 class="logoheader">AI-ML CLUB</h3>
-                    <!-- <img src="../assets/data/whiteiiitbh.png" alt="Server Error" class="college-logo"> -->
-
-                </div>
-                <!-- <h1>AI/ML</h1>
-            <h6>Club Of</h6>
-            <p>Artificial Intelligence</p>
-            <h6>&</h6>
-            <p>Machine Learning</p>
-            <h6>INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, BHAGALPUR</h6> -->
-                <div class="intro-container">
-                    <h1 class="intro1">ARTIFICIAL</h1>
-                    <h1 class="intro2">INTELLIGENCE</h1>
-                    <h1 class="intro3">&</h1>
-                    <h1 class="intro4">MACHINE</h1>
-                    <h1 class="intro5">LEARNING</h1>
-                    <div class="typewritter">
-                        <h3 id="type_text" class="typewritter_text">"EMPOWERING FUTURE WITH AI"</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <header class="navdesign navbar" style="position: relative;">
-            <ul class="nav justify-content-center nav-tabs mx-auto" id="myTab" role="tablist">
-                <li class="nav-item nav_pad1" role="presentation">
-                    <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                        role="tab" aria-controls="home" aria-selected="true" onclick="scrl('home')">HOME</button>
-                </li>
-                <li class="nav-item nav_pad2" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                        type="button" role="tab" aria-controls="profile" aria-selected="false"
-                        onclick="scrl('about')">ABOUT US</button>
-                </li>
-                <li class="nav-item nav_pad3" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                        type="button" role="tab" aria-controls="profile" aria-selected="false"
-                        onclick="window.location.href='/resource/AIML';">RESOURCES</button>
-                </li>
-                <li class="nav-item nav_pad4" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                        type="button" role="tab" aria-controls="contact" aria-selected="false"
-                        onclick="scrl('contact')">CONTACT</button>
-                </li>
-                <li class="nav-item nav_pad5" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" type="submit" role="tab"
-                        aria-controls="contact" aria-selected="false"
-                        onclick="window.location.href='/admin';">ADMIN</button>
-                </li>
-
-            </ul>
-            <!-- <a href="#" class="btn-area">Log in</a>
-        <a href="#" class="btn-area1">Sign up</a> -->
-    </header>
-    <section class="content">
-        <div class="container">
-            <div class="row my-5">
-                <div class="col-md-4 col-12 order-0 aboutimg" data-aos="fade-right" >
-                    <img src="../assets/data/aiabout.png" alt="error" srcset="" width="100%" height="100%">
-                </div>
-                <div class="container1 col-md-8 col-12 order-0 px-md-5 text-md-start text-center order-1" id="about" data-aos="fade-left">
-                    <h1 class="con1_head">ABOUT US</h1>
-                    <p>
-                    <h4 class="con1_desc">
-                        "Predicting the future isn't magic it's <strong>ARTIFICIAL INTELLIGENCE</strong>".
-                    </h4>
-                    <i class="con1_para">
-                        AI-ML Club of IIIT Bhagalpur is for all futuristic ones.This club promises to make system
-                        adaptive through artificial intelligence.We organize webinars, debates, and various competition
-                        along with hackathons to show up your skills and improve the abilities to analyze, and develop
-                        computational intelligence. Our main goal is to administer you with the industrial challenges
-                        for your better future. This club gives everyone equal opprtunity to show up skills of analyzing
-                        problems.
-                    </i>
-                    </p>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-md-5 col-12 order-md-1 order-0 text-center" data-aos="fade-left">
-                    <div class="membercnt">
-                        <div class="cnt ">
-                            <span class="count">10</span>
-                            <p class="para1">Projects</p>
-                        </div>
-                        <div class="cnt">
-                            <span class="count">53</span>
-                            <p class="para1">Members</p>
-                        </div>
-                        <div class="cnt">
-                            <span class="count">2</span>
-                            <p class="para1">Events</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-12 order-md-0 order-1 teammembers box-shad" data-aos="fade-right">
-                    <div class="teammembers">
-                        <!-- <%#for(var i=0;i<results.length;i++){%> -->
-                            <div class="our-team">
-
-                                    <div class="pic">
-                                        <!-- <img
-                                            src="data:image/<%#=results[i].image.contentType%>;base64,<%#=results[i].image.data.toString('base64')%>"> -->
-                                        <br>
-                                    </div>
-                                    <!-- <h3 class="title">
-                                        <%#=results[i].fname+" "+results[i].lname%></h3> -->
-                                    <!-- <span class=" post">Coordinator</span> -->
-                                </div>
-                                <!-- <%#}%> -->
-
-                                    <video src="../assets/data/5.mp4" type="video/mp4" autoplay muted loop></video>
-                                    <p class="para12">SIMULATION</p>
-                                    <p class="para22">OF HUMAN</p>
-                                    <p class="para32">INTELLIGENCE</p>
-                                    <p class="para42">IN MACHINES</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cordinators">
-                    <h1 class="heading123">CLUB COORDINATORS</h1>
-                    <div class="tech-cord">
-                        <img src="../assets/data/ai-mlcoordinator.jfif" alt="" class="faccordimg">
-                        <h2 class="techcordabt1">AYUSH SINHA</h2>
-                        <h2 class="techcordabt2">AI-ML Coordinator</h2>
-                        <h2 class="techcordabt3">Indian Institute Of Information Technology,Bhagalpur</h2>
-                        <div class="cordinator_smedia">
-                            <a href="" class="gmail_logo"><i class="fa fa-envelope"></i></a>
-                            <a href="" class="git_logo"><i class="fa fa-github"></i></a>
-                            <a href="" class="linkedin_logo"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="feedback">
-                    <div class="heading124">TESTIMONIALS</div>
-                    <section>
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonialBox">
-                                        <img src="../assets/data/right-quote.png" class="quote">
-                                        <div class="content1">
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
-                                                aperiam
-                                                mollitia, odio harum dolorum ullam quaerat aut autem dolores ea repellat
-                                                odit doloremque ab illo quisquam ipsum, ipsa dolore. Ducimus eos,
-                                                voluptates
-                                                facere nobis non soluta fugiat unde consequuntur esse ratione laborum,
-                                                distinctio asperiores cumque earum praesentium iste illum natus ipsa
-                                                magni?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonialBox">
-                                        <img src="../assets/data/right-quote.png" class="quote">
-                                        <div class="content1">
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
-                                                aperiam
-                                                mollitia, odio harum dolorum ullam quaerat aut autem dolores ea repellat
-                                                odit doloremque ab illo quisquam ipsum, ipsa dolore. Ducimus eos,
-                                                voluptates
-                                                facere nobis non soluta fugiat unde consequuntur esse ratione laborum,
-                                                distinctio asperiores cumque earum praesentium iste illum natus ipsa
-                                                magni?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonialBox">
-                                        <img src="../assets/data/right-quote.png" class="quote">
-                                        <div class="content1">
-                                            <p>The club focuses on developing a culture of ML in the college and helping
-                                                its
-                                                members explore the emerging field of data science and machine learning.
-                                                The
-                                                club gives content, assignments and project for students to gain the
-                                                knowledge. Guest Speakers sessions are also held to make members aware
-                                                about
-                                                new projectsand carrer in data science and M.L.
-                                                <br>
-                                                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                                                <strong>---&ensp;AYUSH SINHA</strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonialBox">
-                                        <img src="../assets/data/right-quote.png" class="quote">
-                                        <div class="content1">
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
-                                                aperiam
-                                                mollitia, odio harum dolorum ullam quaerat aut autem dolores ea repellat
-                                                odit doloremque ab illo quisquam ipsum, ipsa dolore. Ducimus eos,
-                                                voluptates
-                                                facere nobis non soluta fugiat unde consequuntur esse ratione laborum,
-                                                distinctio asperiores cumque earum praesentium iste illum natus ipsa
-                                                magni?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonialBox">
-                                        <img src="../assets/data/right-quote.png" class="quote">
-                                        <div class="content1">
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
-                                                aperiam
-                                                mollitia, odio harum dolorum ullam quaerat aut autem dolores ea repellat
-                                                odit doloremque ab illo quisquam ipsum, ipsa dolore. Ducimus eos,
-                                                voluptates
-                                                facere nobis non soluta fugiat unde consequuntur esse ratione laborum,
-                                                distinctio asperiores cumque earum praesentium iste illum natus ipsa
-                                                magni?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Footer Section -->
-                <footer>
-                    <div class="ot-club">
-                        <div class="container">
-                            <div class="row d-flex justify-content-around">
-                                <span class="otherclubs">OTHER CLUBS</span>
-                                <div class="col-12 club-links" data-aos="zoom-out" >
-                                    <ul>
-                                        <li><a href="/coding">PyC Community</a></li>
-                                        <li><a href="/web">WebVerse</a></li>
-                                        <li><a href="/ai">AI/ML</a></li>
-                                        <li><a href="/android">Mobile App Development</a></li>
-                                        <li><a href="/blockchain">BlockChain</a></li>
-                                        <li><a href="/robotics">Robotics</a></li>
-                                        <li><a href="/electronics">Electronics</a></li>
-                                        <li><a href="/ecell">E-Cell</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <!-- <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.instagram.com/cybersecurityclub_gst/">
-                                                <i class="fa fa-instagram insta"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/cybersecurity-club-gst/">
-                                                <i class="fa fa-linkedin linked"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.iiitbh.ac.in">
-                                                <i class="fa fa-globe website"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
-                        </div>
-                    </footer>
-
-                </div>
-
-            </div>
-
-            <footer class="lowest_footer">
-                <div class="footer" id="contact">
-                    <div class="footer_row1">
-                        <h3 class="about_ai">AI-ML</h3>
-                        <p class="about_ai_para">Artificial intelligence (AI) is the basis for mimicking human
-                            intelligence
-                            processes through the creation and application of algorithms built into a dynamic computing
-                            environment.
-                            <br>
-                            Machine learning is a subfield of artificial intelligence, which is broadly defined as the
-                            capability of a machine to imitate intelligent human behavior
-                        </p>
-                    </div>
-                    <div class="footer_row2">
-                        <h3 class="about_events">UPCOMING EVENTS</h3>
-                        <p class="about_events_para">COMING SOON...</p>
-                    </div>
-                    <div class="footer_row4">
-                        <img src="../assets/data/ai-logo.png" alt="" class="logo2">
-                        <!-- <img src="../assets/data/whiteiiitbh.png" alt="" class="logo1"> -->
-
-                    </div>
-                    <div class="footer_row3">
-                        <ul style="list-style: none;">
-                            <li><a href="#" class="fa_icon"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="insta_icon"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="utube_icon"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#" class="twit_icon"><i class="fa fa-twitter"></i></a></li>
-
+      </div>
+      <div class="other_clubs hidden">
+        <h1>Other Clubs</h1>
+                    <div class="club-links">
+                        <a href="/coding">PyC Community</a>
+                        <a href="/web">WebVerse</a>
+                        <a href="/ai">AI/ML</a>
+                        <a href="/android">Mobile App Development</a>
+                        <a href="/blockchain">BlockChain</a>
+                        <a href="/robotics">Robotics</a>
+                        <a href="/electronics">Electronics</a>
+                        <a href="/ecell">E-Cell</a>
                         </ul>
                     </div>
-                    <div class="mt-2 border-top text-center border-dark py-2 copyright_container">
-                        <p class="mb-0 text-light footer-text copyright copyright_font">Copyright ©️
-                            <script>
-                                var CurrentYear = new Date().getFullYear()
-                                document.write(CurrentYear)
-                            </script> AI & ML Club, IIIT Bhagalpur
-                        </p>
-                    </div>
+      </div>
+    </div>
+    <div class="footer">
+        <div class="text">
+            <h2>
+                AI-ML
+            </h2>
+            <p>
+                Artificial intelligence (AI) is the basis for mimicking human intelligence processes through the creation and application of algorithms built into a dynamic computing environment.
+                Machine learning is a subfield of artificial intelligence, which is broadly defined as the capability of a machine to imitate intelligent human behavior
+            </p>
+        </div>
+        <img src="../assets/data/ai-logo.png" class="logo"></div>
+    </div>
+    <div class="copyright">
+        Copyright ©️ 2022 AI & ML Club, IIIT Bhagalpur
+        </div>
 
-
-                </div>
-            </footer>
-
-        </section>
-    </section>
-    <!-- Include base js -->
-    <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/ai.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!--swiperjs framework javascript part-->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            loop: true,
-        });
-
-
-
-        
-
-
-        // $(window).scroll(function () {
-        //     $(".content").css("opacity", 1 - $(window).scrollTop() / 250);
-        // });
-
-        document.querySelector('#contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            e.target.elements.name.value = '';
-            e.target.elements.email.value = '';
-            e.target.elements.message.value = '';
-        });
-    </script>
-
-    <!-- our aos data -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    AOS.init({
-        offset: 200,
-        duration: 2000,
-    });
-    </script>
-
-</body>
-
+    <script src="./js/ai.js"></script>
+  </body>
 </html>
