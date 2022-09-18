@@ -23,11 +23,18 @@ const obsr = new IntersectionObserver((entries) => {
 },{ threshold: 0 });
 const targets = document.querySelectorAll(".hidden");
 const targets2 = document.querySelectorAll(".hidden2");
+const target3 = document.querySelectorAll(".hidden3");
+
 targets.forEach((target) => {
   obsr.observe(target);
 });
 
 targets2.forEach((target) => {
+  obsr.observe(target);
+}
+);
+
+target3.forEach((target) => {
   obsr.observe(target);
 }
 );
