@@ -39,11 +39,11 @@
             </a>
           </li>
           <li class="nav-item dropdown mx-2">
-            <a class="nav-link active" href="#" id="navbarDarkDropdownMenuLink" onmousemove="hoverNav()" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link active" href="#" id="navbarDarkDropdownMenuLink" onmousemove="hoverNav()" onmouseleave="hoverLeave()" role="button" data-bs-toggle="dropdown"
               aria-expanded="false" style="font-weight: 500;  border-bottom: 2px solid black;" onmouseover="this.style.borderBottom='2px solid blue'" onmouseout="this.style.borderBottom='2px solid black'">
               Club
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark" id="navHOVER" onmouseleave="hoverLeave()" aria-labelledby="navbarDarkDropdownMenuLink">
+            <ul class="dropdown-menu dropdown-menu-dark" id="navHOVER" onmousemove="hoverNav()" onmouseleave="hoverLeave()" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="https://clubiiitbh.herokuapp.com/coding">PyC</a></li>
               <li><a class="dropdown-item" href="./webverse/web.html">WebVerse</a></li>
               <li><a class="dropdown-item" href="./ai/ai.html">AI/ML</a></li>
