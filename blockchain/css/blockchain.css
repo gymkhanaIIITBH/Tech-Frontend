@@ -423,3 +423,91 @@ section {
     margin-right: 10px;
   }
 }
+
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 23px;
+  color: white;
+  font-family: "Jost", sans-serif;
+}
+.pic {
+  overflow: hidden;
+  width: 180px;
+  border-radius: 23%;
+  vertical-align: middle;
+}
+#img1 {
+  width: 620px;
+  height: 200px;
+  /* margin-left: -60px; */
+}
+/* @media (max-width: 720px) {
+  #img1 {
+    margin-left: -90px !important;
+  }
+} */
+.team .member .member-info {
+  padding-left: 30px;
+}
+.team .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team .member .social a:hover {
+  transform: translate(0, -10%);
+  background-color: #0077b5;
+}
+.team .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin: auto 2%;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+.social .fa {
+  color: black;
+}
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.team .member:hover .social {
+  opacity: 1;
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+}
+

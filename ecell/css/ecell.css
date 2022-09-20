@@ -442,7 +442,8 @@ section {
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
-    height: 70vh;
+    /* height: 70vh; */
+    flex-wrap: wrap;
     flex: 1;
 }
 
@@ -458,6 +459,8 @@ section {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    margin-bottom: 70px;
+    /* padding: 50px; */
 }
 .coordinator:hover{
     height: 370px;

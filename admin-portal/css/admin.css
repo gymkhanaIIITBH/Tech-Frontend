@@ -108,3 +108,14 @@ body {
 #register span {
   cursor: pointer;
 }
+
+
+.club-links ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.club-links ul a{
+  color: white;
+  margin: 10px;
+}

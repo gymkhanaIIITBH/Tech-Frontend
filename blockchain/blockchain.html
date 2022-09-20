@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/blockchain.css">
     <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.1.1-web/css/all.min.css" />
+
     <!-- Import JS -->
     <script type="text/javascript" src="../assets/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -22,14 +24,15 @@
             <img src="../assets/data/hash-rate-logo-(black).jpg">
         </div>
         <div class="containername">
-            <h5>Blockchain Club</h5><h6>Of</h6>
+            <h5>Blockchain Club</h5>
+            <h6>Of</h6>
             <h5 class="linear">INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, BHAGALPUR</h5>
         </div>
         <ul class="nav justify-content-center nav-tabs mx-auto" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
                     role="tab" aria-controls="home" aria-selected="true"
-                    onclick="window.location.href='/';">Home</button>
+                    onclick="window.location.href='/index.html';">Home</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
@@ -39,42 +42,42 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
                     role="tab" aria-controls="profile" aria-selected="false"
-                    onclick="window.location.href='/resource/Android';">Resources</button>
+                    onclick="window.location.href='/resource/resource.html';">Resources</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" type="submit" role="tab"
                     aria-controls="contact" aria-selected="false"
-                    onclick="window.location.href='/admin';">Admin</button>
+                    onclick="window.location.href='/admin-portal/admin.html';">Admin</button>
             </li>
         </ul>
     </header>
-        <!-- <a href="#" class="btn-area">Log in</a>
+    <!-- <a href="#" class="btn-area">Log in</a>
         <a href="#" class="btn-area1">Sign up</a> -->
-        <!-- header -->
-        <br><br><br><br><br><br>
-        <section id="about">
-            <div class="leftside">
-                <div class="GIFS">
-                    <img src="../assets/data/b1.gif"; >
-                </div>       
+    <!-- header -->
+    <br><br><br><br><br><br>
+    <section id="about">
+        <div class="leftside">
+            <div class="GIFS">
+                <img src="../assets/data/b1.gif" ;>
             </div>
-            <div class="rightside">
-                <h1>About Us</h1>
-                <p> Blockchain is a decentralised concept and it doesn't need intermediaries during transactions 
-                    thus making it world's leading software platform for digital assets. It is a distributed database 
-                    that is shared among the nodes of a computer network. This technology can be most simply defined 
-                    distributed ledger that records the provenance of a digital asset. The innovation with a blockchain 
-                    is that it guarantees the fidelity and security of a record of data and generates trust without the 
-                    need for a trusted third party. The overall objective is to facilitate learning, exploration, and 
-                    discussion on blockchain technology and to explore avenues of facilitation such as business, mining 
-                    and finance.
-                </p>
-                <!--<button>Welcome</button>-->
-            </div>
+        </div>
+        <div class="rightside">
+            <h1>About Us</h1>
+            <p> Blockchain is a decentralised concept and it doesn't need intermediaries during transactions
+                thus making it world's leading software platform for digital assets. It is a distributed database
+                that is shared among the nodes of a computer network. This technology can be most simply defined
+                distributed ledger that records the provenance of a digital asset. The innovation with a blockchain
+                is that it guarantees the fidelity and security of a record of data and generates trust without the
+                need for a trusted third party. The overall objective is to facilitate learning, exploration, and
+                discussion on blockchain technology and to explore avenues of facilitation such as business, mining
+                and finance.
+            </p>
+            <!--<button>Welcome</button>-->
+        </div>
 
-        </section>
-        <br><br>
-    
+    </section>
+    <br><br>
+
     <div class="container">
         <div class="row my-5">
             <!-- <div class="col-md-5 col-12 order-0 text-center" id="about">
@@ -92,7 +95,7 @@
                 </i>
                 </p>
             </div> -->
-            <div class="col-md-12 col-12 order-md-1 px-5 order-0">
+            <!-- <div class="col-md-12 col-12 order-md-1 px-5 order-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner newsdesign">
                         <div class="carousel-item active">
@@ -143,7 +146,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="row my-5" id="membercountdiv">
             <div class="col-md-5 col-12 order-md-1 order-0 text-center">
@@ -179,6 +182,21 @@
             </div> -->
         </div>
     </div>
+
+    <section id="team" class="team section-bg" data-aos="zoom-in">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" style="color: white; text-align: center;">
+                <h2>Team</h2>
+            </div>
+
+            <div class="row" data-aos="zoom-in-up">
+                <div class="row" id="coordinator">
+                    <div class="loader-1 center"><span></span></div>
+                </div>
+            </div>
+
+    </section>
+
     <footer>
         <div class="ot-club">
             <div class="container">
@@ -186,14 +204,14 @@
                     <span class="otherclubs">Other Clubs</span>
                     <div class="col-12 club-links">
                         <ul>
-                            <li><a href="/coding">PyC Community</a></li>
-                            <li><a href="/web">WebVerse</a></li>
-                            <li><a href="/ai">AI/ML</a></li>
-                            <li><a href="/android">Mobile App Development</a></li>
-                            <li><a href="/blockchain">BlockChain</a></li>
-                            <li><a href="/robotics">Robotics</a></li>
-                            <li><a href="/electronics">Electronics</a></li>
-                            <li><a href="/ecell">E-Cell</a></li>
+                            <li><a href="https://clubiiitbh.herokuapp.com/coding">PyC Community</a></li>
+                            <li><a href="../webverse/web.html">WebVerse</a></li>
+                            <li><a href="../ai/ai.html">AI/ML</a></li>
+                            <li><a href="../appdev/android.html">Appinvento</a></li>
+                            <li><a href="../blockchain/blockchain.html">BlockChain</a></li>
+                            <li><a href="../robotics/robotics.html">Robotics</a></li>
+                            <li><a href="../electronics/electronics.html">Electronics</a></li>
+                            <li><a href="../ecell/ecell.html">E-Cell</a></li>
                         </ul>
                     </div>
                     <!-- <div class="col-4">
@@ -240,4 +258,5 @@
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,4 @@
+const url = `https://clubiiitbh.herokuapp.com`;
 document.addEventListener("mousemove", parallax);
 function parallax(e) {
   this.querySelectorAll(".move").forEach((move) => {
@@ -47,3 +48,56 @@ $(function () {
     }
   });
 });
+
+
+
+// Coordinator Detail Fetch Method
+
+var coord = document.getElementById('coordinator');
+
+const fetchCoordinator = () => {
+  fetch(`${url}/api/club/web`)
+    .then((res) => res.json())
+    .then((res) => {
+     
+      if (res.status === 0) {
+       
+        UpdateCoordinator(res.data);
+      }
+    })
+    .catch()
+}
+
+fetchCoordinator();
+
+
+const UpdateCoordinator = (data) => {
+  var html = ``;
+  for (i in data) {
+    var img = arrayBufferToBase64(data[i]['image'].data.data);
+    var imgSrc = `data:image/${data[i].image.contentType};base64,${img.toString('base64')}`;
+    html += `
+    <div class="member">
+                        <img src="${imgSrc}" alt="">
+                        <h2>${data[i]['fname']} ${data[i]['lname']}</h2>
+                        <p>CLUB COORDINATOR</p>
+                        <div class="social-coord">
+                            <a href="${data[i]['linkedIn']}"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="${data[i]['github']}"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="${data[i]['instagram']}"><i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+      `
+  }
+
+  coord.innerHTML = html;
+}
+
+// buffer to binary convert
+const arrayBufferToBase64 = (buffer) => {
+  var binary = '';
+  var bytes = [].slice.call(new Uint8Array(buffer));
+  bytes.forEach((b) => binary += String.fromCharCode(b));
+  return window.btoa(binary);
+};
+

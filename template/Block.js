@@ -1,7 +1,7 @@
 
 html = `
         <h1>Use Laptop/ Desktop</h1>
-        <a href="/">
+        <a href="/index.html">
             <p>home</p>
         </a>
         <a href="../webverse/web.html">
@@ -10,11 +10,11 @@ html = `
         <a href="../ai/ai.html">
             <p>AIML</p>
         </a>
-        <a href="/coding">
+        <a href="https://clubiiitbh.herokuapp.com/coding">
             <p>PyC</p>
         </a>
         <a href="../appdev/android.html">
-            <p>Android</p>
+            <p>Appinvento</p>
         </a>
         <a href="../robotics/robotics.html">
             <p>Robosapiens</p>
